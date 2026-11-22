@@ -1,6 +1,6 @@
 # Render Blueprint for the Orbi backend (chat, voice, admin dashboard, Shopify webhooks).
 # Render -> New -> Blueprint -> pick this repository. Render reads this file and creates the web service.
-# Values marked "sync: false" are secrets: Render asks for them once on the screen (copy them from your .env).
+# Secrets are added in the Render dashboard after the first deploy (see the note at the bottom).
 # Never put a secret value in this file: it is in git.
 services:
   - type: web
@@ -31,31 +31,14 @@ services:
       - key: LLM_SECONDARY
         value: claude
 
-      # ---- the address of this service: https://<service-name>.onrender.com (fill in once Render shows it) ----
+      # ---- the address of this service ----
       - key: APP_URL
-        sync: false
+        value: https://techstore-agent.onrender.com
       - key: SHOPIFY_OAUTH_REDIRECT_URI
-        sync: false
+        value: https://techstore-agent.onrender.com/api/shopify/oauth/callback
 
-      # ---- secrets: copy each from your .env (keep the SAME values, or saved Shopify tokens and codes stop working) ----
-      - key: MONGODB_URI
-        sync: false
-      - key: SHOPIFY_CLIENT_ID
-        sync: false
-      - key: SHOPIFY_CLIENT_SECRET
-        sync: false
-      - key: SHOPIFY_TOKEN_ENCRYPTION_KEY
-        sync: false
-      - key: OTP_HMAC_SECRET
-        sync: false
-      - key: ANALYTICS_HMAC_SECRET
-        sync: false
-      - key: GEMINI_API_KEY
-        sync: false
-      # optional: the Claude backup when Gemini is slow or down (leave empty if you have no key)
-      - key: ANTHROPIC_API_KEY
-        sync: false
-      - key: EMAIL_USER
-        sync: false
-      - key: EMAIL_APP_PASSWORD
-        sync: false
+      # Secrets are NOT in this file (it is in git). After the first deploy, open this service ->
+      # Environment -> "Add from .env" and paste your secrets once: MONGODB_URI, SHOPIFY_CLIENT_ID,
+      # SHOPIFY_CLIENT_SECRET, SHOPIFY_TOKEN_ENCRYPTION_KEY, OTP_HMAC_SECRET, ANALYTICS_HMAC_SECRET,
+      # GEMINI_API_KEY, ANTHROPIC_API_KEY (optional), EMAIL_USER, EMAIL_APP_PASSWORD.
+      # Keep the SAME values as your local .env, or saved Shopify tokens and codes stop working.
