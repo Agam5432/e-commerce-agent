@@ -7,8 +7,8 @@ services:
     name: orbi-backend
     runtime: docker
     dockerfilePath: ./Dockerfile
-    # Starter never sleeps. The Free plan sleeps after 15 idle minutes and the next shopper waits about a minute.
-    plan: starter
+    # Free plan: sleeps after 15 idle minutes, next shopper waits about a minute. Change to starter to keep it always on.
+    plan: free
     # closest Render region to India
     region: singapore
     healthCheckPath: /healthz
