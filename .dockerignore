@@ -1,0 +1,14 @@
+# Never in the image: secrets, local data, dependencies built on another machine, tests
+.env
+.env.*
+!.env.example
+node_modules
+uploads
+coverage
+test
+.git
+.github
+*.log
+.DS_Store
+e2e-output
+shopify-app

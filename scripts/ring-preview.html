@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ring sounds: listen and choose</title>
+<style>
+  :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --accent:#6d4aff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1020; --card:#131a30; --ink:#e6eaf5; --muted:#94a3b8; --line:#243050; --accent:#8b7bff; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  p.lead { color: var(--muted); margin: 0 0 18px; }
+  .bar { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-bottom:16px; }
+  .bar label { font-size:13px; color:var(--muted); white-space:nowrap; }
+  .bar input[type=range] { flex:1; }
+  .bar output { width:38px; text-align:right; font-variant-numeric: tabular-nums; font-size:13px; }
+  .grid { display:grid; gap:10px; }
+  .row { display:flex; align-items:center; gap:14px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .row.playing { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+  .num { width:28px; height:28px; border-radius:50%; background:color-mix(in srgb, var(--accent) 14%, transparent); color:var(--accent); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; flex:none; }
+  .txt { flex:1; min-width:0; }
+  .txt b { display:block; }
+  .txt span { color:var(--muted); font-size:13px; }
+  button { font:inherit; border:0; border-radius:9px; padding:8px 16px; cursor:pointer; background:var(--accent); color:#fff; font-weight:600; min-width:84px; }
+  button.stop { background:#ef4444; }
+  .tag { font-size:11px; padding:2px 8px; border-radius:999px; background:var(--line); color:var(--muted); margin-left:6px; vertical-align:middle; }
+  footer { margin-top:20px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ring sounds</h1>
+  <p class="lead">Har sound ko Play karke suno. Jo pasand aaye uska number mujhe batao (volume slider bhi dekh lo, taaki tezi ka andaza ho jaye).</p>
+
+  <div class="bar">
+    <label for="vol">Volume</label>
+    <input id="vol" type="range" min="1" max="100" value="55">
+    <output id="volOut">55%</output>
+  </div>
+
+  <div class="grid" id="list"></div>
+  <footer>Ye sab browser me banayi gayi awaazein hain (koi audio file nahi). Asli ring me sound isi tarah har 2-3 second me dohrayi jayegi jab tak call uthayi ya reject na ho.</footer>
+</main>
+
+<script>
+const AC = window.AudioContext || window.webkitAudioContext;
+let ctx = null, timer = null, playingId = null;
+const vol = () => Number(document.getElementById('vol').value) / 100;
+
+// one tone with a fast attack and a decay, so it does not click
+function tone(t, freq, dur, { type = 'sine', gain = 0.3, attack = 0.01, release = 0.06, to = null } = {}) {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.setValueAtTime(freq, t);
+  if (to) o.frequency.linearRampToValueAtTime(to, t + dur);
+  const peak = gain * vol();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(Math.max(peak, 0.0002), t + attack);
+  g.gain.setValueAtTime(Math.max(peak, 0.0002), t + Math.max(attack, dur - release));
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + dur + 0.02);
+}
+// a struck sound: the tone is loudest at the start and dies away
+function strike(t, freq, dur, { type = 'sine', gain = 0.3 } = {}) {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.value = freq;
+  const peak = Math.max(gain * vol(), 0.0002);
+  g.gain.setValueAtTime(peak, t);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + dur + 0.02);
+}
+
+// each preset schedules ONE cycle starting at t and returns how long the cycle lasts (seconds)
+const PRESETS = [
+  { name: 'Abhi wali (purani)', note: 'Ek seedhi beep, halki. Yahi abhi chal rahi hai.', tag: 'current',
+    cycle(t) { tone(t, 880, 0.25, { gain: 0.12 }); return 2.5; } },
+
+  { name: 'Classic phone', note: 'Asli phone jaisi do-tone ring: "brrrr... brrrr".',
+    cycle(t) { for (const f of [440, 480]) tone(t, f, 1.0, { type: 'sine', gain: 0.22, attack: 0.03, release: 0.1 });
+               return 2.6; } },
+
+  { name: 'Double ring', note: 'Do chhoti ring ek ke baad ek ("trring-trring"), phir pause.',
+    cycle(t) { for (const s of [0, 0.55]) for (const f of [400, 450]) tone(t + s, f, 0.4, { gain: 0.22, attack: 0.02 }); return 2.6; } },
+
+  { name: 'Old telephone bell', note: 'Purane telephone ki tez ghanti jaisi trill. Door se bhi sunai degi.',
+    cycle(t) { for (let i = 0; i < 16; i++) tone(t + i * 0.055, i % 2 ? 1500 : 1900, 0.05, { type: 'square', gain: 0.07, attack: 0.004, release: 0.02 }); return 2.2; } },
+
+  { name: 'Soft chime', note: 'Teen sureeli notes upar ki taraf (C, E, G). Narm, office ke liye.',
+    cycle(t) { [523.25, 659.25, 783.99].forEach((f, i) => strike(t + i * 0.2, f, 1.1, { gain: 0.28 })); return 2.8; } },
+
+  { name: 'Bell', note: 'Ek saaf ghanti ("ting"), thodi der gunjti hai.',
+    cycle(t) { [[1, 1], [2.76, 0.5], [5.4, 0.3], [8.93, 0.15]].forEach(([m, a]) => strike(t, 660 * m, 1.8 / Math.sqrt(m), { gain: 0.22 * a })); return 3.0; } },
+
+  { name: 'Digital', note: 'Teen tez digital beeps ("bip-bip-bip"). Sabse alag sunai deti hai.',
+    cycle(t) { for (let i = 0; i < 3; i++) tone(t + i * 0.18, 1175, 0.11, { type: 'square', gain: 0.1, attack: 0.004, release: 0.03 }); return 1.8; } },
+
+  { name: 'Marimba', note: 'Khushnuma, lakdi jaisi tapak. Halka aur friendly.',
+    cycle(t) { [587.33, 739.99, 880, 739.99].forEach((f, i) => { strike(t + i * 0.15, f, 0.45, { gain: 0.3 }); strike(t + i * 0.15, f * 4, 0.12, { gain: 0.06 }); }); return 2.4; } },
+
+  { name: 'Gentle pulse', note: 'Narm uthti-girti awaaz, kaan ko chubhti nahi. Lambe time ke liye achhi.',
+    cycle(t) { tone(t, 660, 1.1, { type: 'triangle', gain: 0.2, attack: 0.5, release: 0.5 }); tone(t, 990, 1.1, { type: 'sine', gain: 0.06, attack: 0.5, release: 0.5 }); return 2.4; } },
+
+  { name: 'Alert (urgent)', note: 'Upar chadhti tez siren, callback due jaise zaroori alert ke liye.',
+    cycle(t) { for (let i = 0; i < 3; i++) tone(t + i * 0.3, 700, 0.28, { type: 'sawtooth', gain: 0.1, to: 1100, attack: 0.02, release: 0.04 }); return 2.0; } },
+
+  { name: 'Doorbell', note: 'Ding-dong, do notes. Seedha aur samajh me aane wala.', tag: 'naya',
+    cycle(t) { [[659.25, 0], [523.25, 0.55]].forEach(([f, s]) => { strike(t + s, f, 1.3, { gain: 0.3 }); strike(t + s, f * 2, 0.5, { gain: 0.08 }); }); return 3.0; } },
+
+  { name: 'Sonar ping', note: 'Ek saaf "ping" jo door tak gunjta hai. Modern aur shaant.', tag: 'naya',
+    cycle(t) { tone(t, 1320, 0.9, { gain: 0.26, attack: 0.005, release: 0.85 }); tone(t + 0.0, 1320 * 2, 0.4, { gain: 0.05, attack: 0.005, release: 0.35 }); return 2.6; } },
+
+  { name: 'Retro melody', note: 'Chhoti 8-bit jaisi dhun (video game wali). Yaad rehne wali.', tag: 'naya',
+    cycle(t) { [523.25, 659.25, 783.99, 1046.5, 783.99, 659.25].forEach((f, i) => tone(t + i * 0.12, f, 0.11, { type: 'square', gain: 0.08, attack: 0.004, release: 0.03 })); return 2.0; } },
+
+  { name: 'Harp', note: 'Neeche se upar sureeli bahti hui, bahut narm.', tag: 'naya',
+    cycle(t) { [392, 493.88, 587.33, 783.99, 987.77].forEach((f, i) => { strike(t + i * 0.11, f, 1.0, { gain: 0.22 }); strike(t + i * 0.11, f * 2, 0.4, { gain: 0.05 }); }); return 3.0; } },
+
+  { name: 'Awaaz: "Incoming call"', note: 'Computer khud bolta hai "Incoming call". Mac, Windows, phone sab me chalta hai, par awaaz aur accent har device me alag hoti hai.', tag: 'naya',
+    cycle() { if ('speechSynthesis' in window) { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance('Incoming call'); u.volume = vol(); u.rate = 0.95; speechSynthesis.speak(u); } return 4.0; } },
+];
+
+function stop() {
+  clearInterval(timer); timer = null; playingId = null;
+  document.querySelectorAll('.row').forEach((r) => { r.classList.remove('playing'); const b = r.querySelector('button'); b.textContent = 'Play'; b.classList.remove('stop'); });
+}
+function play(i) {
+  const was = playingId;
+  stop();
+  if (was === i) return;
+  ctx = ctx || new AC(); if (ctx.state === 'suspended') ctx.resume();
+  playingId = i;
+  const row = document.querySelectorAll('.row')[i]; row.classList.add('playing');
+  const b = row.querySelector('button'); b.textContent = 'Stop'; b.classList.add('stop');
+  const p = PRESETS[i];
+  let next = ctx.currentTime + 0.05;
+  const run = () => { while (next < ctx.currentTime + 0.5) { next += p.cycle(next); } };
+  run(); timer = setInterval(run, 200);
+}
+
+const list = document.getElementById('list');
+PRESETS.forEach((p, i) => {
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = '<div class="num">' + (i + 1) + '</div><div class="txt"><b>' + p.name + (p.tag ? '<span class="tag">' + p.tag + '</span>' : '') + '</b><span>' + p.note + '</span></div><button type="button">Play</button>';
+  row.querySelector('button').addEventListener('click', () => play(i));
+  list.appendChild(row);
+});
+document.getElementById('vol').addEventListener('input', (e) => { document.getElementById('volOut').textContent = e.target.value + '%'; });
+</script>
+</body>
+</html>

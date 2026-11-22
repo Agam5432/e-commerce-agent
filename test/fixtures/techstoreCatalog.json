@@ -1,0 +1,3922 @@
+[
+{
+"title": "Twilight Plum Ribbon Dress",
+"type": "Maternity Clothing",
+"tags": [
+"dress"
+],
+"description": "Flowy and feminine, our Twilight Plum Ribbon Dress is crafted in a soft, breathable 95% rayon and 5% elastane blend that drapes beautifully on your changing bod",
+"vendor": "LoveMere",
+"variants": [
+{
+"title": "S",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "M",
+"price": "6300.00",
+"available": false
+},
+{
+"title": "L",
+"price": "6300.00",
+"available": false
+},
+{
+"title": "XL",
+"price": "6300.00",
+"available": false
+}
+]
+},
+{
+"title": "Savannah Maxi Dress",
+"type": "Maternity Clothing",
+"tags": [
+"dress",
+"Maxi",
+"women"
+],
+"description": "When motherhood bogs you down, you deserve to feel like the goddess that you are. And nothing better to feel good than a classic striped maxi dress. This floor ",
+"vendor": "LoveMere",
+"variants": [
+{
+"title": "XS",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "S",
+"price": "4700.00",
+"available": false
+},
+{
+"title": "L",
+"price": "4700.00",
+"available": false
+},
+{
+"title": "XL",
+"price": "4700.00",
+"available": false
+}
+]
+},
+{
+"title": "Seamless Nursing Bra",
+"type": "Bra",
+"tags": [
+"Bra",
+"bras",
+"women"
+],
+"description": "Exclusive to Lovem\u00e8re, our ribbed design has been manually adjusted and tailored for optimal support as your bust size fluctuates through maternity and postpart",
+"vendor": "LoveMere",
+"variants": [
+{
+"title": "M",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "L",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "XL",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "XXL",
+"price": "5700.00",
+"available": true
+}
+]
+},
+{
+"title": "Chloe Dream Love Organic Bra",
+"type": "Bra",
+"tags": [
+"Bra",
+"bras",
+"women"
+],
+"description": "Discover unparalleled comfort with Chloe Dream Love Organic Nursing Bra . Crafted with superior cotton, this soft, breathable, and absorbent fabric efficiently ",
+"vendor": "LoveMere",
+"variants": [
+{
+"title": "S",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "M",
+"price": "3400.00",
+"available": false
+},
+{
+"title": "L",
+"price": "3400.00",
+"available": false
+},
+{
+"title": "XL",
+"price": "3400.00",
+"available": false
+}
+]
+},
+{
+"title": "Brooklyn Triangle Bra",
+"type": "Bra",
+"tags": [
+"Bra",
+"bras",
+"women"
+],
+"description": "This ultra-soft, smoothing cotton Lovem\u00e8re Triangle Nursing Bra is made to brighten up your day! With its plunging neckline and elastic straps crafted by the Lo",
+"vendor": "LoveMere",
+"variants": [
+{
+"title": "Default Title",
+"price": "5700.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Light Blue Denim Skirt",
+"type": "Kids' Clothing",
+"tags": [
+"denim",
+"girls",
+"kids",
+"skirt"
+],
+"description": "A-line denim skirt with an elastic back waist and a front pocket.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Light Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "4-5Y / Light Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "6-7Y / Light Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "8-9Y / Light Blue",
+"price": "57200.00",
+"available": true
+}
+]
+},
+{
+"title": "Kids' Blue Star Print Cotton Pyjama Set",
+"type": "Kids' Clothing",
+"tags": [
+"cotton",
+"kids",
+"pajama",
+"sleepwear"
+],
+"description": "Two-piece cotton pyjama set with a star print for sound sleep.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Blue",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "4-5Y / Blue",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "6-7Y / Blue",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "8-9Y / Blue",
+"price": "62000.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Pink Pullover Hoodie",
+"type": "Kids' Clothing",
+"tags": [
+"girls",
+"hoodie",
+"kids",
+"sweatshirt",
+"winter"
+],
+"description": "Fleece pullover hoodie with a front pocket and drawstring hood.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Pink",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "4-5Y / Pink",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "6-7Y / Pink",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "8-9Y / Pink",
+"price": "81000.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' White Unicorn Print T-Shirt",
+"type": "Kids' Clothing",
+"tags": [
+"girls",
+"kids",
+"printed",
+"t-shirt",
+"unicorn"
+],
+"description": "Soft cotton tee with a sparkly unicorn print.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "4-5Y / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "6-7Y / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "8-9Y / White",
+"price": "33300.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Maroon Cotton Leggings",
+"type": "Kids' Clothing",
+"tags": [
+"cotton",
+"girls",
+"kids",
+"leggings"
+],
+"description": "Stretchy full-length cotton leggings with a comfy elastic waist.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Maroon",
+"price": "28600.00",
+"available": true
+},
+{
+"title": "4-5Y / Maroon",
+"price": "28600.00",
+"available": true
+},
+{
+"title": "6-7Y / Maroon",
+"price": "28600.00",
+"available": true
+},
+{
+"title": "8-9Y / Maroon",
+"price": "28600.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Purple Tutu Party Dress",
+"type": "Kids' Clothing",
+"tags": [
+"girls",
+"kids",
+"party dress",
+"tutu"
+],
+"description": "Layered tulle party dress with a sparkly bodice, perfect for birthdays.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Purple",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "4-5Y / Purple",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "6-7Y / Purple",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "8-9Y / Purple",
+"price": "95400.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Blue Denim Dungaree",
+"type": "Kids' Clothing",
+"tags": [
+"denim",
+"dungaree",
+"girls",
+"kids"
+],
+"description": "Adjustable-strap denim dungaree with front pockets and soft stretch.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "4-5Y / Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "6-7Y / Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "8-9Y / Blue",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "Girls' Pink Floral Frock",
+"type": "Kids' Clothing",
+"tags": [
+"dress",
+"floral",
+"frock",
+"girls",
+"kids"
+],
+"description": "Cute cotton frock with a floral print and a twirly skirt.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Pink",
+"price": "66700.00",
+"available": true
+},
+{
+"title": "4-5Y / Pink",
+"price": "66700.00",
+"available": true
+},
+{
+"title": "6-7Y / Pink",
+"price": "66700.00",
+"available": true
+},
+{
+"title": "8-9Y / Pink",
+"price": "66700.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Blue Checked Casual Shirt",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"casual",
+"checked",
+"kids",
+"shirt"
+],
+"description": "Cotton casual shirt in a classic check with a button front.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "4-5Y / Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "6-7Y / Blue",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "8-9Y / Blue",
+"price": "57200.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Yellow Puffer Jacket",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"jacket",
+"kids",
+"puffer",
+"winter"
+],
+"description": "Warm padded jacket with a hood and zip pockets for chilly days.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Yellow",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "4-5Y / Yellow",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "6-7Y / Yellow",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "8-9Y / Yellow",
+"price": "143100.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Blue Striped Polo T-Shirt",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"kids",
+"polo",
+"striped"
+],
+"description": "Striped cotton polo with a soft collar and short sleeves.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Blue",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "4-5Y / Blue",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "6-7Y / Blue",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "8-9Y / Blue",
+"price": "42900.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Grey Track Pants",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"kids",
+"sports",
+"track pants"
+],
+"description": "Soft cotton-blend track pants with elastic waist and drawstring.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Grey",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "4-5Y / Grey",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "6-7Y / Grey",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "8-9Y / Grey",
+"price": "47700.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Khaki Cotton Shorts",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"cotton",
+"kids",
+"shorts",
+"summer"
+],
+"description": "Comfy cotton shorts with an elastic waist and side pockets.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Khaki",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "4-5Y / Khaki",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "6-7Y / Khaki",
+"price": "42900.00",
+"available": true
+},
+{
+"title": "8-9Y / Khaki",
+"price": "42900.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Navy Hooded Sweatshirt",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"hoodie",
+"kids",
+"sweatshirt",
+"winter"
+],
+"description": "Warm fleece hoodie with a kangaroo pocket and ribbed cuffs.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Navy",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "4-5Y / Navy",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "6-7Y / Navy",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "8-9Y / Navy",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Green Dinosaur Print T-Shirt",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"kids",
+"printed",
+"t-shirt"
+],
+"description": "Soft cotton tee with a fun dinosaur print.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Green",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "4-5Y / Green",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "6-7Y / Green",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "8-9Y / Green",
+"price": "33300.00",
+"available": true
+}
+]
+},
+{
+"title": "Boys' Blue Denim Jeans",
+"type": "Kids' Clothing",
+"tags": [
+"boys",
+"denim",
+"jeans",
+"kids"
+],
+"description": "Durable stretch denim jeans with an adjustable inner waist for growing kids.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "2-3Y / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "4-5Y / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "6-7Y / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "8-9Y / Blue",
+"price": "76300.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Pink Cotton Pajama Set",
+"type": "Women's Clothing",
+"tags": [
+"cotton",
+"loungewear",
+"pajama",
+"sleepwear",
+"women"
+],
+"description": "Soft cotton button-up pajama top with matching pants.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Pink",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "S / Pink",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "M / Pink",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "L / Pink",
+"price": "95400.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Blue Denim Shorts",
+"type": "Women's Clothing",
+"tags": [
+"casual",
+"denim",
+"shorts",
+"summer",
+"women"
+],
+"description": "High-rise denim shorts with a frayed hem and a relaxed fit.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "26 / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "28 / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "30 / Blue",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "32 / Blue",
+"price": "76300.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Beige Double-Breasted Trench Coat",
+"type": "Women's Clothing",
+"tags": [
+"coat",
+"outerwear",
+"trench coat",
+"winter",
+"women"
+],
+"description": "Classic double-breasted trench coat with a belted waist and storm flap.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Beige",
+"price": "286200.00",
+"available": true
+},
+{
+"title": "S / Beige",
+"price": "286200.00",
+"available": true
+},
+{
+"title": "M / Beige",
+"price": "286200.00",
+"available": true
+},
+{
+"title": "L / Beige",
+"price": "286200.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Cream Knit Cardigan",
+"type": "Women's Clothing",
+"tags": [
+"cardigan",
+"knitwear",
+"sweater",
+"winter",
+"women"
+],
+"description": "Soft knit open-front cardigan with button closure and patch pockets.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Cream",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "S / Cream",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "M / Cream",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "L / Cream",
+"price": "133500.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Black Palazzo Pants",
+"type": "Women's Clothing",
+"tags": [
+"ethnic",
+"palazzo",
+"pants",
+"wide leg",
+"women"
+],
+"description": "Wide-leg palazzo pants in a fluid fabric with an elastic waist.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "S / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Black High-Waist Yoga Leggings",
+"type": "Women's Clothing",
+"tags": [
+"activewear",
+"gym",
+"leggings",
+"women",
+"yoga"
+],
+"description": "High-waist stretch leggings with a four-way stretch fabric and a squat-proof fit.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Black",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "S / Black",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "76300.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Lilac Oversized Hoodie",
+"type": "Women's Clothing",
+"tags": [
+"casual",
+"hoodie",
+"oversized",
+"sweatshirt",
+"women"
+],
+"description": "Cozy oversized fleece hoodie with a drawstring hood and front pocket.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Lilac",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "S / Lilac",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "M / Lilac",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "L / Lilac",
+"price": "114400.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Light Wash Denim Jacket",
+"type": "Women's Clothing",
+"tags": [
+"casual",
+"denim",
+"jacket",
+"outerwear",
+"women"
+],
+"description": "Cropped light-wash denim jacket with button front and chest pockets.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Light Blue",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "S / Light Blue",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "M / Light Blue",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "L / Light Blue",
+"price": "171700.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Olive Pleated Midi Skirt",
+"type": "Women's Clothing",
+"tags": [
+"casual",
+"midi",
+"pleated",
+"skirt",
+"women"
+],
+"description": "Flowing pleated midi skirt with an elastic waist.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Olive",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "S / Olive",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "M / Olive",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "L / Olive",
+"price": "95400.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Ivory Satin Button-Up Shirt",
+"type": "Women's Clothing",
+"tags": [
+"blouse",
+"office",
+"satin",
+"shirt",
+"women"
+],
+"description": "Silky satin shirt with a relaxed fit, perfect for work or evenings out.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Ivory",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "S / Ivory",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "M / Ivory",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "L / Ivory",
+"price": "114400.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Beige Oversized Graphic T-Shirt",
+"type": "Women's Clothing",
+"tags": [
+"casual",
+"graphic",
+"oversized",
+"t-shirt",
+"women"
+],
+"description": "Drop-shoulder oversized tee with a minimal back print in soft cotton.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Beige",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "S / Beige",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "M / Beige",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "L / Beige",
+"price": "57200.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's White Ribbed Tank Top",
+"type": "Women's Clothing",
+"tags": [
+"basic",
+"ribbed",
+"summer",
+"tank top",
+"women"
+],
+"description": "Stretchy ribbed cotton tank top with a scoop neck. A wardrobe basic.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "S / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "M / White",
+"price": "33300.00",
+"available": true
+},
+{
+"title": "L / White",
+"price": "33300.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Teal Printed Cotton Kurti",
+"type": "Women's Clothing",
+"tags": [
+"cotton",
+"ethnic",
+"kurti",
+"printed",
+"women"
+],
+"description": "Straight-cut cotton kurti with a printed yoke, three-quarter sleeves and side slits.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Teal",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "S / Teal",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "M / Teal",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "L / Teal",
+"price": "76300.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Black A-Line Dress",
+"type": "Women's Clothing",
+"tags": [
+"a-line",
+"black",
+"dress",
+"party",
+"women"
+],
+"description": "Classic black A-line dress with a fitted bodice and flared skirt.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "S / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "133500.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Floral Print Summer Midi Dress",
+"type": "Women's Clothing",
+"tags": [
+"dress",
+"floral",
+"midi",
+"summer",
+"women"
+],
+"description": "Flowy midi dress with a floral print, V-neck and tie waist.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "XS / Floral Multi",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "S / Floral Multi",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "M / Floral Multi",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "L / Floral Multi",
+"price": "143100.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Light Blue Wide-Leg Jeans",
+"type": "Women's Clothing",
+"tags": [
+"denim",
+"jeans",
+"trending",
+"wide leg",
+"women"
+],
+"description": "Relaxed wide-leg jeans with a high waist and a full-length hem.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "26 / Light Blue",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "28 / Light Blue",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "30 / Light Blue",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "32 / Light Blue",
+"price": "143100.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's High-Waist Skinny Blue Jeans",
+"type": "Women's Clothing",
+"tags": [
+"denim",
+"high waist",
+"jeans",
+"skinny",
+"women"
+],
+"description": "High-rise skinny jeans in stretch denim that sculpts and stays comfortable.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "26 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "28 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "30 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "32 / Blue",
+"price": "124000.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Maroon Crew Neck Knit Sweater",
+"type": "Men's Clothing",
+"tags": [
+"knitwear",
+"men",
+"sweater",
+"winter",
+"wool blend"
+],
+"description": "Warm wool-blend crew neck sweater with ribbed cuffs and hem.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Maroon",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "M / Maroon",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "L / Maroon",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "XL / Maroon",
+"price": "124000.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Beige Linen Shirt",
+"type": "Men's Clothing",
+"tags": [
+"casual",
+"linen",
+"men",
+"shirt",
+"summer"
+],
+"description": "Breathable linen-blend shirt with a relaxed fit, ideal for hot weather.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Beige",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "M / Beige",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "L / Beige",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "XL / Beige",
+"price": "104900.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Royal Blue Dry-Fit Sports T-Shirt",
+"type": "Men's Clothing",
+"tags": [
+"dry fit",
+"gym",
+"men",
+"running",
+"sports"
+],
+"description": "Quick-dry breathable polyester tee for gym, running and training.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Royal Blue",
+"price": "52400.00",
+"available": true
+},
+{
+"title": "M / Royal Blue",
+"price": "52400.00",
+"available": true
+},
+{
+"title": "L / Royal Blue",
+"price": "52400.00",
+"available": true
+},
+{
+"title": "XL / Royal Blue",
+"price": "52400.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Black Quilted Puffer Jacket",
+"type": "Men's Clothing",
+"tags": [
+"jacket",
+"men",
+"outerwear",
+"puffer",
+"winter"
+],
+"description": "Lightweight quilted puffer jacket with a high collar and zip pockets for cold days.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Black",
+"price": "238500.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "238500.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "238500.00",
+"available": true
+},
+{
+"title": "XL / Black",
+"price": "238500.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Red Checked Flannel Shirt",
+"type": "Men's Clothing",
+"tags": [
+"checked",
+"flannel",
+"men",
+"shirt",
+"winter"
+],
+"description": "Brushed cotton flannel shirt in a classic check with chest pocket.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Red",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "M / Red",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "L / Red",
+"price": "95400.00",
+"available": true
+},
+{
+"title": "XL / Red",
+"price": "95400.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Black Graphic Print T-Shirt",
+"type": "Men's Clothing",
+"tags": [
+"graphic",
+"men",
+"printed",
+"streetwear",
+"t-shirt"
+],
+"description": "Regular fit black tee with a bold chest graphic in soft cotton jersey.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Black",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "47700.00",
+"available": true
+},
+{
+"title": "XL / Black",
+"price": "47700.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Black Cotton Joggers",
+"type": "Men's Clothing",
+"tags": [
+"gym",
+"joggers",
+"lounge",
+"men",
+"track pants"
+],
+"description": "Soft cotton-blend joggers with an elastic waistband, ribbed cuffs and zip pockets.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "M / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "L / Black",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "XL / Black",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Olive Cargo Shorts",
+"type": "Men's Clothing",
+"tags": [
+"cargo",
+"casual",
+"men",
+"shorts",
+"summer"
+],
+"description": "Relaxed cotton cargo shorts with six pockets and an adjustable waist.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "28 / Olive",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "30 / Olive",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "32 / Olive",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "34 / Olive",
+"price": "76300.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Khaki Chino Trousers",
+"type": "Men's Clothing",
+"tags": [
+"casual",
+"chinos",
+"cotton",
+"men",
+"trousers"
+],
+"description": "Slim tapered chinos in stretch cotton twill. Smart enough for work, easy enough for weekends.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "28 / Khaki",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "30 / Khaki",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "32 / Khaki",
+"price": "114400.00",
+"available": true
+},
+{
+"title": "34 / Khaki",
+"price": "114400.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Grey Zip-Up Hoodie",
+"type": "Men's Clothing",
+"tags": [
+"hoodie",
+"men",
+"sweatshirt",
+"winter",
+"zip"
+],
+"description": "Fleece-lined zip-up hoodie with a drawstring hood and kangaroo pockets.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Grey",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "M / Grey",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "L / Grey",
+"price": "104900.00",
+"available": true
+},
+{
+"title": "XL / Grey",
+"price": "104900.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Denim Trucker Jacket",
+"type": "Men's Clothing",
+"tags": [
+"casual",
+"denim",
+"jacket",
+"men",
+"outerwear"
+],
+"description": "Classic denim trucker jacket with button front, chest pockets and a regular fit.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Indigo",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "M / Indigo",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "L / Indigo",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "XL / Indigo",
+"price": "171700.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Slim Fit White Formal Shirt",
+"type": "Men's Clothing",
+"tags": [
+"formal",
+"men",
+"office",
+"shirt",
+"slim fit"
+],
+"description": "Crisp full sleeve formal shirt in wrinkle-resistant cotton blend.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / White",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "M / White",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "L / White",
+"price": "81000.00",
+"available": true
+},
+{
+"title": "XL / White",
+"price": "81000.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Light Blue Oxford Button-Down Shirt",
+"type": "Men's Clothing",
+"tags": [
+"cotton",
+"formal",
+"men",
+"oxford",
+"shirt"
+],
+"description": "Classic Oxford cotton shirt with a button-down collar and a tailored fit. Works for office or weekend.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Light Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "M / Light Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "L / Light Blue",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "XL / Light Blue",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Navy Blue Polo T-Shirt",
+"type": "Men's Clothing",
+"tags": [
+"casual",
+"cotton",
+"men",
+"polo",
+"t-shirt"
+],
+"description": "Pique cotton polo with a ribbed collar and a two-button placket.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / Navy",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "M / Navy",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "L / Navy",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "XL / Navy",
+"price": "57200.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's White Cotton Crew Neck T-Shirt",
+"type": "Men's Clothing",
+"tags": [
+"basic",
+"cotton",
+"crew neck",
+"men",
+"t-shirt"
+],
+"description": "Everyday crew neck tee in 100% combed cotton with a regular fit and soft feel.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "S / White",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "M / White",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "L / White",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "XL / White",
+"price": "38100.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Black Skinny Fit Jeans",
+"type": "Men's Clothing",
+"tags": [
+"black",
+"denim",
+"jeans",
+"men",
+"skinny"
+],
+"description": "Skinny fit black jeans in soft stretch denim. Pairs easily with tees and shirts.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "28 / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "30 / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "32 / Black",
+"price": "133500.00",
+"available": true
+},
+{
+"title": "34 / Black",
+"price": "133500.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Classic Slim Fit Blue Jeans",
+"type": "Men's Clothing",
+"tags": [
+"casual",
+"denim",
+"jeans",
+"men",
+"slim fit"
+],
+"description": "Slim fit stretch denim jeans with a mid rise and a classic five-pocket design. Comfortable all day.",
+"vendor": "TechStore Fashion",
+"variants": [
+{
+"title": "28 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "30 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "32 / Blue",
+"price": "124000.00",
+"available": true
+},
+{
+"title": "34 / Blue",
+"price": "124000.00",
+"available": true
+}
+]
+},
+{
+"title": "Ambrane 10000mAh Power Bank",
+"type": "Power Banks",
+"tags": [
+"ambrane",
+"black",
+"blue",
+"power banks",
+"white"
+],
+"description": "Slim 10000mAh power bank with fast charging and an LED indicator.",
+"vendor": "Ambrane",
+"variants": [
+{
+"title": "Blue",
+"price": "1500.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "1500.00",
+"available": true
+},
+{
+"title": "White",
+"price": "1500.00",
+"available": true
+}
+]
+},
+{
+"title": "Anker PowerCore 20000mAh Power Bank",
+"type": "Power Banks",
+"tags": [
+"anker",
+"black",
+"blue",
+"power banks"
+],
+"description": "Large 20000mAh power bank that can charge a phone several times over.",
+"vendor": "Anker",
+"variants": [
+{
+"title": "Black",
+"price": "4300.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "4300.00",
+"available": true
+}
+]
+},
+{
+"title": "Mi Power Bank 3i 10000mAh",
+"type": "Power Banks",
+"tags": [
+"midnight black",
+"power banks",
+"silver",
+"xiaomi"
+],
+"description": "10000mAh power bank with fast charging support and dual output ports.",
+"vendor": "Xiaomi",
+"variants": [
+{
+"title": "Midnight Black",
+"price": "2100.00",
+"available": true
+},
+{
+"title": "Silver",
+"price": "2100.00",
+"available": true
+}
+]
+},
+{
+"title": "Mi 33W SonicCharge Charger",
+"type": "Chargers",
+"tags": [
+"chargers",
+"white",
+"xiaomi"
+],
+"description": "33W fast charger with a USB-A port, ideal for supported phones.",
+"vendor": "Xiaomi",
+"variants": [
+{
+"title": "White",
+"price": "1700.00",
+"available": true
+}
+]
+},
+{
+"title": "Samsung 25W Super Fast Charger",
+"type": "Chargers",
+"tags": [
+"black",
+"chargers",
+"samsung",
+"white"
+],
+"description": "25W USB-C wall charger built for fast charging on compatible Galaxy phones.",
+"vendor": "Samsung",
+"variants": [
+{
+"title": "Black",
+"price": "2300.00",
+"available": true
+},
+{
+"title": "White",
+"price": "2300.00",
+"available": true
+}
+]
+},
+{
+"title": "Anker 20W USB-C Fast Charger",
+"type": "Chargers",
+"tags": [
+"anker",
+"black",
+"chargers",
+"white"
+],
+"description": "Compact USB-C wall charger for fast and safe charging of phones and tablets.",
+"vendor": "Anker",
+"variants": [
+{
+"title": "White",
+"price": "1900.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "1900.00",
+"available": true
+}
+]
+},
+{
+"title": "JBL Wave Beam Earbuds",
+"type": "Bluetooth Earbuds",
+"tags": [
+"black",
+"blue",
+"bluetooth earbuds",
+"jbl",
+"white"
+],
+"description": "True wireless earbuds with deep bass sound, a crisp mic and a water-resistant body.",
+"vendor": "JBL",
+"variants": [
+{
+"title": "Black",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "White",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "4700.00",
+"available": true
+}
+]
+},
+{
+"title": "Samsung Galaxy Buds FE",
+"type": "Bluetooth Earbuds",
+"tags": [
+"bluetooth earbuds",
+"graphite",
+"samsung",
+"white"
+],
+"description": "Comfortable wireless earbuds with active noise cancelling and a secure fit.",
+"vendor": "Samsung",
+"variants": [
+{
+"title": "Graphite",
+"price": "9500.00",
+"available": true
+},
+{
+"title": "White",
+"price": "9500.00",
+"available": true
+}
+]
+},
+{
+"title": "Noise Buds VS104 Earbuds",
+"type": "Bluetooth Earbuds",
+"tags": [
+"bluetooth earbuds",
+"carbon black",
+"noise",
+"snow white"
+],
+"description": "Wireless earbuds with a clear call microphone, touch controls and quick pairing.",
+"vendor": "Noise",
+"variants": [
+{
+"title": "Carbon Black",
+"price": "2300.00",
+"available": true
+},
+{
+"title": "Snow White",
+"price": "2400.00",
+"available": true
+}
+]
+},
+{
+"title": "boAt Airdopes 141 Earbuds",
+"type": "Bluetooth Earbuds",
+"tags": [
+"bluetooth earbuds",
+"boat",
+"bold black",
+"cool grey"
+],
+"description": "True wireless earbuds with deep bass, low-latency mode and a long playtime case.",
+"vendor": "boAt",
+"variants": [
+{
+"title": "Bold Black",
+"price": "2400.00",
+"available": true
+},
+{
+"title": "Cool Grey",
+"price": "1900.00",
+"available": true
+}
+]
+},
+{
+"title": "Sony SRS-XB100 Bluetooth Speaker",
+"type": "Speakers",
+"tags": [
+"black",
+"blue",
+"orange",
+"sony",
+"speakers"
+],
+"description": "Small, rugged Bluetooth speaker with clear sound and High bass and having good battery backup of10 hours that goes anywhere.",
+"vendor": "Sony",
+"variants": [
+{
+"title": "Black",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "5500.00",
+"available": true
+},
+{
+"title": "Orange",
+"price": "4800.00",
+"available": true
+}
+]
+},
+{
+"title": "boAt Stone 352 Bluetooth Speaker",
+"type": "Speakers",
+"tags": [
+"black",
+"blue",
+"boat",
+"red",
+"speakers"
+],
+"description": "Compact Bluetooth speaker with strong bass, a splash-proof body and long playtime.",
+"vendor": "boAt",
+"variants": [
+{
+"title": "Black",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Red",
+"price": "2800.00",
+"available": true
+}
+]
+},
+{
+"title": "JBL Flip 6 Portable Bluetooth Speaker",
+"type": "Speakers",
+"tags": [
+"black",
+"blue",
+"jbl",
+"red",
+"speakers"
+],
+"description": "Portable waterproof Bluetooth speaker with punchy sound and long playtime.",
+"vendor": "JBL",
+"variants": [
+{
+"title": "Black",
+"price": "11400.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "11400.00",
+"available": true
+},
+{
+"title": "Red",
+"price": "11400.00",
+"available": true
+},
+{
+"title": "Teal",
+"price": "11400.00",
+"available": false
+}
+]
+},
+{
+"title": "Dell WM126 Wireless Mouse",
+"type": "Mouse",
+"tags": [
+"black",
+"blue",
+"dell",
+"mouse"
+],
+"description": "Reliable wireless mouse with a USB receiver and a tidy, compact design.",
+"vendor": "Dell",
+"variants": [
+{
+"title": "Black",
+"price": "1400.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "1400.00",
+"available": true
+}
+]
+},
+{
+"title": "HP X1000 Wired Mouse",
+"type": "Mouse",
+"tags": [
+"black",
+"hp",
+"mouse"
+],
+"description": "Simple wired mouse with a comfortable grip and smooth tracking.",
+"vendor": "HP",
+"variants": [
+{
+"title": "Black",
+"price": "900.00",
+"available": true
+}
+]
+},
+{
+"title": "Logitech M331 Silent Wireless Mouse",
+"type": "Mouse",
+"tags": [
+"black",
+"blue",
+"logitech",
+"mouse",
+"red"
+],
+"description": "Wireless mouse with quiet clicks, a comfortable shape and long battery life.",
+"vendor": "Logitech",
+"variants": [
+{
+"title": "Black",
+"price": "2300.00",
+"available": true
+}
+]
+},
+{
+"title": "Nillkin Frosted Shield Phone Case",
+"type": "Phone Covers",
+"tags": [
+"black",
+"nillkin",
+"phone covers",
+"red"
+],
+"description": "Frosted hard case that feels smooth and grips well. Sample product for demo store.",
+"vendor": "Nillkin",
+"variants": [
+{
+"title": "Black / Galaxy S24",
+"price": "1400.00",
+"available": true
+},
+{
+"title": "Black / Redmi Note 13",
+"price": "1400.00",
+"available": true
+},
+{
+"title": "Red / Galaxy S24",
+"price": "1400.00",
+"available": true
+},
+{
+"title": "Red / Redmi Note 13",
+"price": "1400.00",
+"available": true
+}
+]
+},
+{
+"title": "ESR Classic Hybrid Phone Case",
+"type": "Phone Covers",
+"tags": [
+"black",
+"clear",
+"esr",
+"phone covers"
+],
+"description": "Clear hybrid case with raised edges to protect the screen and camera. Sample product for demo store.",
+"vendor": "ESR",
+"variants": [
+{
+"title": "Clear / iPhone 15",
+"price": "1500.00",
+"available": true
+},
+{
+"title": "Clear / Galaxy A55",
+"price": "1500.00",
+"available": true
+},
+{
+"title": "Black / iPhone 15",
+"price": "1500.00",
+"available": true
+},
+{
+"title": "Black / Galaxy A55",
+"price": "1500.00",
+"available": true
+}
+]
+},
+{
+"title": "Spigen Rugged Armor Phone Case",
+"type": "Phone Covers",
+"tags": [
+"matte black",
+"matte blue",
+"phone covers",
+"spigen"
+],
+"description": "Slim, shock-absorbing case with a matte finish and a precise fit. Sample product for demo store.",
+"vendor": "Spigen",
+"variants": [
+{
+"title": "Matte Black / iPhone 15",
+"price": "1900.00",
+"available": true
+},
+{
+"title": "Matte Black / Galaxy S24",
+"price": "1900.00",
+"available": true
+},
+{
+"title": "Matte Blue / iPhone 15",
+"price": "1900.00",
+"available": true
+},
+{
+"title": "Matte Blue / Galaxy S24",
+"price": "1900.00",
+"available": true
+}
+]
+},
+{
+"title": "Samsonite Laptop Backpack 15.6",
+"type": "Laptop Bags",
+"tags": [
+"black",
+"laptop bags",
+"navy",
+"samsonite"
+],
+"description": "Smart, structured laptop backpack with a padded sleeve and a hidden back pocket. Sample product for demo store.",
+"vendor": "Samsonite",
+"variants": [
+{
+"title": "Black",
+"price": "7600.00",
+"available": true
+},
+{
+"title": "Navy",
+"price": "7600.00",
+"available": true
+}
+]
+},
+{
+"title": "Dell Essential Briefcase 15",
+"type": "Laptop Bags",
+"tags": [
+"black",
+"dell",
+"laptop bags"
+],
+"description": "Slim briefcase for 15-inch laptops with a shoulder strap and accessory pockets. Sample product for demo store.",
+"vendor": "Dell",
+"variants": [
+{
+"title": "Black",
+"price": "3800.00",
+"available": false
+}
+]
+},
+{
+"title": "HP Prelude Pro 15.6 Laptop Backpack",
+"type": "Laptop Bags",
+"tags": [
+"black",
+"grey",
+"hp",
+"laptop bags"
+],
+"description": "Water-resistant laptop backpack with a padded compartment and organizer pockets. Sample product for demo store.",
+"vendor": "HP",
+"variants": [
+{
+"title": "Black",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Grey",
+"price": "3400.00",
+"available": true
+}
+]
+},
+{
+"title": "American Tourister Fizz School Backpack 28L",
+"type": "School Bags",
+"tags": [
+"american tourister",
+"black",
+"blue",
+"school bags",
+"teal"
+],
+"description": "Light 28L backpack with a padded back and a spacious main compartment for books.",
+"vendor": "American Tourister",
+"variants": [
+{
+"title": "Blue",
+"price": "4100.00",
+"available": true
+},
+{
+"title": "Teal",
+"price": "4100.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "4100.00",
+"available": true
+}
+]
+},
+{
+"title": "Wildcraft Campus School Bag 30L",
+"type": "School Bags",
+"tags": [
+"grey",
+"navy",
+"school bags",
+"wildcraft"
+],
+"description": "Durable 30L backpack with a laptop pocket, multiple compartments and cushioned back support. Sample product for demo store.",
+"vendor": "Wildcraft",
+"variants": [
+{
+"title": "Navy",
+"price": "4300.00",
+"available": true
+},
+{
+"title": "Grey",
+"price": "4300.00",
+"available": true
+}
+]
+},
+{
+"title": "Skybags Brat School Backpack 32L",
+"type": "School Bags",
+"tags": [
+"black",
+"blue",
+"red",
+"school bags",
+"skybags"
+],
+"description": "Roomy 32L school backpack with padded straps, a front pocket and a bottle holder. Sample product for demo store.",
+"vendor": "Skybags",
+"variants": [
+{
+"title": "Blue",
+"price": "3800.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "3800.00",
+"available": true
+},
+{
+"title": "Red",
+"price": "3800.00",
+"available": true
+}
+]
+},
+{
+"title": "Skechers Go Walk Shoes",
+"type": "Shoes",
+"tags": [
+"black",
+"navy",
+"shoes",
+"skechers"
+],
+"description": "Slip-on walking shoes with a flexible sole and a cushioned insole for long days. Sample product for demo store.",
+"vendor": "Skechers",
+"variants": [
+{
+"title": "Black / 7",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Black / 8",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Black / 9",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Black / 10",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Navy / 7",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Navy / 8",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Navy / 9",
+"price": "7200.00",
+"available": true
+},
+{
+"title": "Navy / 10",
+"price": "7200.00",
+"available": true
+}
+]
+},
+{
+"title": "Puma Softride Sports Shoes",
+"type": "Shoes",
+"tags": [
+"navy",
+"puma",
+"red",
+"shoes"
+],
+"description": "Soft, bouncy sports shoes for walking, the gym and daily wear. Sample product for demo store.",
+"vendor": "Puma",
+"variants": [
+{
+"title": "Navy / 7",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Navy / 8",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Navy / 9",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Navy / 10",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Red / 7",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Red / 8",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Red / 9",
+"price": "5300.00",
+"available": true
+},
+{
+"title": "Red / 10",
+"price": "5300.00",
+"available": true
+}
+]
+},
+{
+"title": "Adidas Duramo SL Running Shoes",
+"type": "Shoes",
+"tags": [
+"adidas",
+"cloud white",
+"core black",
+"shoes"
+],
+"description": "Comfortable everyday running shoes with a cushioned midsole and a grippy outsole.",
+"vendor": "Adidas",
+"variants": [
+{
+"title": "Core Black / 7",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Core Black / 8",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Core Black / 9",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Core Black / 10",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Cloud White / 7",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Cloud White / 8",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Cloud White / 9",
+"price": "6300.00",
+"available": true
+},
+{
+"title": "Cloud White / 10",
+"price": "6300.00",
+"available": true
+}
+]
+},
+{
+"title": "Nike Revolution 7 Running Shoes",
+"type": "Shoes",
+"tags": [
+"black / white",
+"grey / blue",
+"nike",
+"shoes"
+],
+"description": "Lightweight running shoes with soft cushioning and a breathable mesh upper.",
+"vendor": "Nike",
+"variants": [
+{
+"title": "Black / White / 7",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Black / White / 8",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Black / White / 9",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Black / White / 10",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Grey / Blue / 7",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Grey / Blue / 8",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Grey / Blue / 9",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Grey / Blue / 10",
+"price": "6600.00",
+"available": true
+}
+]
+},
+{
+"title": "Allen Solly Formal Leather Belt",
+"type": "Belts",
+"tags": [
+"allen solly",
+"belts",
+"black",
+"brown"
+],
+"description": "Smart formal belt with a slim buckle that pairs well with trousers.",
+"vendor": "Allen Solly",
+"variants": [
+{
+"title": "Black / 32",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Black / 34",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Black / 36",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Brown / 32",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Brown / 34",
+"price": "3400.00",
+"available": true
+},
+{
+"title": "Brown / 36",
+"price": "3400.00",
+"available": true
+}
+]
+},
+{
+"title": "Woodland Casual Leather Belt",
+"type": "Belts",
+"tags": [
+"belts",
+"black",
+"tan",
+"woodland"
+],
+"description": "Sturdy casual belt in genuine leather with a pin buckle for jeans and chinos.",
+"vendor": "Woodland",
+"variants": [
+{
+"title": "Tan / 32",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Tan / 34",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Tan / 36",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Black / 32",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Black / 34",
+"price": "2800.00",
+"available": true
+},
+{
+"title": "Black / 36",
+"price": "2800.00",
+"available": true
+}
+]
+},
+{
+"title": "Tommy Hilfiger Reversible Leather Belt",
+"type": "Belts",
+"tags": [
+"belts",
+"black",
+"brown",
+"tommy hilfiger"
+],
+"description": "Reversible leather belt with a polished buckle, black on one side and brown on the other.",
+"vendor": "Tommy Hilfiger",
+"variants": [
+{
+"title": "Black / 32",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Black / 34",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Black / 36",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Brown / 32",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Brown / 34",
+"price": "4700.00",
+"available": true
+},
+{
+"title": "Brown / 36",
+"price": "4700.00",
+"available": true
+}
+]
+},
+{
+"title": "Noise ColorFit Smartwatch",
+"type": "Watches",
+"tags": [
+"jet black",
+"noise",
+"rose pink",
+"silver grey",
+"watches"
+],
+"description": "Bright display smartwatch with heart rate and sleep tracking, sport modes and Bluetooth calling. Sample product for demo store.",
+"vendor": "Noise",
+"variants": [
+{
+"title": "Jet Black",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Rose Pink",
+"price": "6600.00",
+"available": true
+},
+{
+"title": "Silver Grey",
+"price": "6600.00",
+"available": true
+}
+]
+},
+{
+"title": "Fossil Grant Chronograph Watch",
+"type": "Watches",
+"tags": [
+"black leather",
+"brown leather",
+"fossil",
+"watches"
+],
+"description": "Chronograph watch with a genuine leather strap and a polished, timeless dial. Sample product for demo store.",
+"vendor": "Fossil",
+"variants": [
+{
+"title": "Brown Leather",
+"price": "18100.00",
+"available": true
+},
+{
+"title": "Black Leather",
+"price": "18100.00",
+"available": true
+}
+]
+},
+{
+"title": "Casio Vintage Digital Watch",
+"type": "Watches",
+"tags": [
+"black",
+"casio",
+"gold",
+"silver",
+"watches"
+],
+"description": "Retro digital watch with stopwatch, alarm and a long-life battery. Sample product for demo store.",
+"vendor": "Casio",
+"variants": [
+{
+"title": "Silver",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "Gold",
+"price": "5700.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "5700.00",
+"available": true
+}
+]
+},
+{
+"title": "Titan Neo Analog Watch",
+"type": "Watches",
+"tags": [
+"black",
+"gold",
+"silver",
+"titan",
+"watches"
+],
+"description": "Classic analog watch with a stainless steel case, date display and water resistance. Sample product for demo store.",
+"vendor": "Titan",
+"variants": [
+{
+"title": "Gold",
+"price": "12400.00",
+"available": true
+},
+{
+"title": "Silver",
+"price": "12400.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "12400.00",
+"available": true
+}
+]
+},
+{
+"title": "Apple iPhone 15",
+"type": "Smartphones",
+"tags": [
+"apple",
+"black",
+"blue",
+"pink",
+"smartphones"
+],
+"description": "Dynamic Island, a 48MP main camera, USB-C and a durable glass and aluminum design.",
+"vendor": "Apple",
+"variants": [
+{
+"title": "Black / 128GB",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "Black / 256GB",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "Blue / 128GB",
+"price": "76300.00",
+"available": true
+},
+{
+"title": "Blue / 256GB",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "Pink / 128GB",
+"price": "71600.00",
+"available": true
+},
+{
+"title": "Pink / 256GB",
+"price": "71600.00",
+"available": true
+}
+]
+},
+{
+"title": "OnePlus Nord CE4",
+"type": "Smartphones",
+"tags": [
+"celadon marble",
+"dark chrome",
+"oneplus",
+"smartphones"
+],
+"description": "Smooth AMOLED display, fast charging and clean software for a quick, reliable phone.",
+"vendor": "OnePlus",
+"variants": [
+{
+"title": "Dark Chrome / 128GB",
+"price": "26700.00",
+"available": true
+},
+{
+"title": "Dark Chrome / 256GB",
+"price": "31400.00",
+"available": true
+},
+{
+"title": "Celadon Marble / 128GB",
+"price": "26700.00",
+"available": true
+},
+{
+"title": "Celadon Marble / 256GB",
+"price": "31400.00",
+"available": true
+}
+]
+},
+{
+"title": "Xiaomi Redmi Note 13",
+"type": "Smartphones",
+"tags": [
+"arctic white",
+"midnight black",
+"ocean teal",
+"smartphones",
+"xiaomi"
+],
+"description": "Large bright display, 108MP main camera and fast charging at a friendly price. Sample product for demo store.",
+"vendor": "Xiaomi",
+"variants": [
+{
+"title": "Midnight Black / 128GB",
+"price": "21900.00",
+"available": true
+},
+{
+"title": "Midnight Black / 256GB",
+"price": "25700.00",
+"available": true
+},
+{
+"title": "Arctic White / 128GB",
+"price": "21900.00",
+"available": true
+},
+{
+"title": "Arctic White / 256GB",
+"price": "25700.00",
+"available": true
+},
+{
+"title": "Ocean Teal / 128GB",
+"price": "21900.00",
+"available": true
+},
+{
+"title": "Ocean Teal / 256GB",
+"price": "25700.00",
+"available": true
+}
+]
+},
+{
+"title": "Samsung Galaxy A55 5G",
+"type": "Smartphones",
+"tags": [
+"awesome iceblue",
+"awesome navy",
+"samsung",
+"smartphones"
+],
+"description": "6.6-inch AMOLED display, 5G connectivity, a multi-lens camera and all-day battery life. Sample product for demo store.",
+"vendor": "Samsung",
+"variants": [
+{
+"title": "Awesome Navy / 128GB",
+"price": "41000.00",
+"available": true
+},
+{
+"title": "Awesome Navy / 256GB",
+"price": "46700.00",
+"available": true
+},
+{
+"title": "Awesome Iceblue / 128GB",
+"price": "41000.00",
+"available": true
+},
+{
+"title": "Awesome Iceblue / 256GB",
+"price": "46700.00",
+"available": true
+}
+]
+},
+{
+"title": "ASUS Vivobook 15 Laptop",
+"type": "Laptops",
+"tags": [
+"asus",
+"cool silver",
+"laptops",
+"quiet blue"
+],
+"description": "Everyday 15.6-inch laptop with a full-size keyboard, fast SSD and a slim, portable body. Sample product for demo store.",
+"vendor": "ASUS",
+"variants": [
+{
+"title": "Quiet Blue / 8GB / 256GB",
+"price": "55300.00",
+"available": true
+},
+{
+"title": "Quiet Blue / 16GB / 512GB",
+"price": "70600.00",
+"available": true
+},
+{
+"title": "Cool Silver / 8GB / 256GB",
+"price": "55300.00",
+"available": true
+},
+{
+"title": "Cool Silver / 16GB / 512GB",
+"price": "70600.00",
+"available": false
+}
+]
+},
+{
+"title": "Lenovo IdeaPad Slim 3",
+"type": "Laptops",
+"tags": [
+"abyss blue",
+"arctic grey",
+"laptops",
+"lenovo"
+],
+"description": "Lightweight everyday laptop with a 15.6-inch screen, SSD storage and a privacy shutter webcam. Sample product for demo store.",
+"vendor": "Lenovo",
+"variants": [
+{
+"title": "Arctic Grey / 8GB / 256GB",
+"price": "52400.00",
+"available": true
+},
+{
+"title": "Arctic Grey / 16GB / 512GB",
+"price": "66700.00",
+"available": true
+},
+{
+"title": "Abyss Blue / 8GB / 256GB",
+"price": "52400.00",
+"available": false
+},
+{
+"title": "Abyss Blue / 16GB / 512GB",
+"price": "66700.00",
+"available": true
+}
+]
+},
+{
+"title": "HP Pavilion 14 Laptop",
+"type": "Laptops",
+"tags": [
+"hp",
+"laptops",
+"natural silver",
+"space blue"
+],
+"description": "Slim 14-inch laptop with a crisp display, quick start-up and a comfortable keyboard for everyday use. Sample product for demo store.",
+"vendor": "HP",
+"variants": [
+{
+"title": "Natural Silver / 8GB / 256GB",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "Natural Silver / 16GB / 512GB",
+"price": "73400.00",
+"available": true
+},
+{
+"title": "Space Blue / 8GB / 256GB",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "Space Blue / 16GB / 512GB",
+"price": "73400.00",
+"available": false
+}
+]
+},
+{
+"title": "Dell Inspiron 15 Laptop",
+"type": "Laptops",
+"tags": [
+"carbon black",
+"dell",
+"laptops",
+"platinum silver"
+],
+"description": "15.6-inch Full HD display, fast SSD storage, backlit keyboard and a long-lasting battery for work and study. Sample product for demo store.",
+"vendor": "Dell",
+"variants": [
+{
+"title": "Platinum Silver / 8GB / 256GB",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "Platinum Silver / 16GB / 512GB",
+"price": "79100.00",
+"available": true
+},
+{
+"title": "Carbon Black / 8GB / 256GB",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "Carbon Black / 16GB / 512GB",
+"price": "79100.00",
+"available": true
+}
+]
+},
+{
+"title": "Wireless Bluetooth Earbuds",
+"type": "Electronics",
+"tags": [
+"audio",
+"bluetooth",
+"earbuds",
+"wireless"
+],
+"description": "True wireless earbuds with 30-hour battery, deep bass, touch controls and IPX4 rating.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Black",
+"price": "124000.00",
+"available": false
+},
+{
+"title": "White",
+"price": "124000.00",
+"available": false
+}
+]
+},
+{
+"title": "Stainless Steel Water Bottle 1L",
+"type": "Home   Kitchen",
+"tags": [
+"bottle",
+"gym",
+"insulated",
+"steel"
+],
+"description": "Double-wall insulated bottle that keeps drinks cold for 24 hours and hot for 12.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Silver",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "Blue",
+"price": "62000.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "62000.00",
+"available": true
+}
+]
+},
+{
+"title": "UV400 Aviator Sunglasses",
+"type": "Eyewear",
+"tags": [
+"aviator",
+"summer",
+"sunglasses",
+"unisex"
+],
+"description": "Polarized aviator sunglasses with metal frame and UV400 protection.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Gold",
+"price": "57200.00",
+"available": true
+},
+{
+"title": "Silver",
+"price": "57200.00",
+"available": false
+},
+{
+"title": "Black",
+"price": "57200.00",
+"available": true
+}
+]
+},
+{
+"title": "Analog Wrist Watch - Rose Gold",
+"type": "Watches",
+"tags": [
+"analog",
+"gift",
+"watch",
+"womens"
+],
+"description": "Minimal stainless-steel analog watch with a 3-year warranty.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Default Title",
+"price": "190800.00",
+"available": true
+}
+]
+},
+{
+"title": "Genuine Leather Bifold Wallet",
+"type": "Wallets",
+"tags": [
+"gift",
+"leather",
+"mens",
+"wallet"
+],
+"description": "Slim bifold wallet with 6 card slots, coin pocket and RFID protection.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Brown",
+"price": "66700.00",
+"available": true
+},
+{
+"title": "Black",
+"price": "66700.00",
+"available": true
+}
+]
+},
+{
+"title": "Urban Laptop Backpack 25L",
+"type": "Bags",
+"tags": [
+"backpack",
+"laptop",
+"travel",
+"unisex"
+],
+"description": "Water-resistant backpack with padded laptop compartment, USB port and multiple pockets.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Black",
+"price": "124000.00",
+"available": false
+},
+{
+"title": "Navy",
+"price": "124000.00",
+"available": false
+},
+{
+"title": "Grey",
+"price": "124000.00",
+"available": false
+}
+]
+},
+{
+"title": "Running Sneakers - Black",
+"type": "Footwear",
+"tags": [
+"running",
+"shoes",
+"sneakers",
+"unisex"
+],
+"description": "Lightweight breathable mesh sneakers with cushioned sole for running and gym.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "7",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "8",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "9",
+"price": "171700.00",
+"available": true
+},
+{
+"title": "10",
+"price": "171700.00",
+"available": true
+}
+]
+},
+{
+"title": "Banarasi Silk Saree - Maroon",
+"type": "Saree",
+"tags": [
+"saree",
+"silk",
+"wedding",
+"womens"
+],
+"description": "Elegant silk-blend saree with golden zari border and matching blouse piece.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "Default Title",
+"price": "286200.00",
+"available": true
+}
+]
+},
+{
+"title": "Slim Fit Blue Denim Jeans",
+"type": "Jeans",
+"tags": [
+"casual",
+"denim",
+"jeans",
+"mens"
+],
+"description": "Stretchable slim-fit denim with 5-pocket styling and a comfortable mid-rise waist.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "28",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "30",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "32",
+"price": "143100.00",
+"available": true
+},
+{
+"title": "34",
+"price": "143100.00",
+"available": true
+}
+]
+},
+{
+"title": "Women's Printed Anarkali Kurti",
+"type": "Kurti",
+"tags": [
+"ethnic",
+"kurti",
+"printed",
+"womens"
+],
+"description": "Flared rayon anarkali kurti with floral print, perfect for office and casual outings.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "S",
+"price": "104900.00",
+"available": false
+},
+{
+"title": "M",
+"price": "104900.00",
+"available": false
+},
+{
+"title": "L",
+"price": "104900.00",
+"available": false
+},
+{
+"title": "XL",
+"price": "104900.00",
+"available": false
+}
+]
+},
+{
+"title": "Men's Classic White T-Shirt",
+"type": "T-Shirt",
+"tags": [
+"basic",
+"cotton",
+"mens",
+"tshirt"
+],
+"description": "Premium combed cotton round-neck tee with a soft feel and durable stitching.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "S",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "M",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "L",
+"price": "38100.00",
+"available": true
+},
+{
+"title": "XL",
+"price": "38100.00",
+"available": true
+}
+]
+},
+{
+"title": "Men's Cotton Straight Kurta - Sky Blue",
+"type": "Kurta",
+"tags": [
+"cotton",
+"ethnic",
+"kurta",
+"mens"
+],
+"description": "Soft 100% cotton kurta for daily and festive wear. Breathable, regular fit, machine washable.",
+"vendor": "Dev Test Brand",
+"variants": [
+{
+"title": "S",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "M",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "L",
+"price": "85800.00",
+"available": true
+},
+{
+"title": "XL",
+"price": "85800.00",
+"available": true
+}
+]
+},
+{
+"title": "The Collection Snowboard: Liquid",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "Hydrogen Vendor",
+"variants": [
+{
+"title": "Default Title",
+"price": "71600.00",
+"available": true
+}
+]
+},
+{
+"title": "The Collection Snowboard: Oxygen",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "Hydrogen Vendor",
+"variants": [
+{
+"title": "Default Title",
+"price": "97800.00",
+"available": true
+}
+]
+},
+{
+"title": "The Collection Snowboard: Hydrogen",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "Hydrogen Vendor",
+"variants": [
+{
+"title": "Default Title",
+"price": "57300.00",
+"available": true
+}
+]
+},
+{
+"title": "The 3p Fulfilled Snowboard",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "251000.00",
+"available": true
+}
+]
+},
+{
+"title": "The Multi-managed Snowboard",
+"type": "snowboard",
+"tags": [
+"Premium",
+"Snow",
+"Snowboard",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "Multi-managed Vendor",
+"variants": [
+{
+"title": "Default Title",
+"price": "60100.00",
+"available": true
+}
+]
+},
+{
+"title": "The Multi-location Snowboard",
+"type": "snowboard",
+"tags": [
+"Premium",
+"Snow",
+"Snowboard",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "69700.00",
+"available": true
+}
+]
+},
+{
+"title": "The Out of Stock Snowboard",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "84600.00",
+"available": false
+}
+]
+},
+{
+"title": "Selling Plans Ski Wax",
+"type": "accessories",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Selling Plans Ski Wax",
+"price": "2400.00",
+"available": true
+},
+{
+"title": "Special Selling Plans Ski Wax",
+"price": "4800.00",
+"available": true
+},
+{
+"title": "Sample Selling Plans Ski Wax",
+"price": "1000.00",
+"available": true
+}
+]
+},
+{
+"title": "The Complete Snowboard",
+"type": "snowboard",
+"tags": [
+"Premium",
+"Snow",
+"Snowboard",
+"Sport",
+"Winter"
+],
+"description": "This PREMIUM snowboard is so SUPER DUPER awesome!",
+"vendor": "Snowboard Vendor",
+"variants": [
+{
+"title": "Ice",
+"price": "66800.00",
+"available": true
+},
+{
+"title": "Dawn",
+"price": "66800.00",
+"available": true
+},
+{
+"title": "Powder",
+"price": "66800.00",
+"available": true
+},
+{
+"title": "Electric",
+"price": "66800.00",
+"available": true
+},
+{
+"title": "Sunset",
+"price": "66800.00",
+"available": true
+}
+]
+},
+{
+"title": "The Compare at Price Snowboard",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "75000.00",
+"available": true
+}
+]
+},
+{
+"title": "The Inventory Not Tracked Snowboard",
+"type": "snowboard",
+"tags": [
+"Accessory",
+"Sport",
+"Winter"
+],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "90700.00",
+"available": true
+}
+]
+},
+{
+"title": "The Videographer Snowboard",
+"type": "snowboard",
+"tags": [],
+"description": "",
+"vendor": "TechStore",
+"variants": [
+{
+"title": "Default Title",
+"price": "84600.00",
+"available": true
+}
+]
+},
+{
+"title": "Gift Card",
+"type": "giftcard",
+"tags": [],
+"description": "This is a gift card for the store",
+"vendor": "Snowboard Vendor",
+"variants": [
+{
+"title": "$10",
+"price": "954.03",
+"available": false
+},
+{
+"title": "$25",
+"price": "2385.07",
+"available": false
+},
+{
+"title": "$50",
+"price": "4770.14",
+"available": false
+},
+{
+"title": "$100",
+"price": "9540.28",
+"available": false
+}
+]
+}
+]

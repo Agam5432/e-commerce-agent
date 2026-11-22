@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    :root {
+      /* 8px Spatial Grid */
+      --space-0-5: 4px;
+      --space-1: 8px;
+      --space-1-5: 12px;
+      --space-2: 16px;
+      --space-3: 24px;
+      --space-4: 32px;
+      --space-5: 40px;
+      --space-6: 48px;
+      --space-8: 64px;
+
+      /* Radii (12-16px card philosophy) */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-pill: 9999px;
+
+      /* Z-index tokens */
+      --z-sticky: 20;
+      --z-drawer: 40;
+      --z-modal: 50;
+      --z-palette: 60;
+      --z-toast: 70;
+      --z-tooltip: 80;
+
+      /* Light Mode Palette (WCAG AA/AAA verified) */
+      --bg-canvas: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-elevated: #FFFFFF;
+      --bg-subtle: #F1F5F9;
+
+      --text-primary: #0F172A;   /* 17.4:1 vs #FFFFFF */
+      --text-secondary: #475569; /* 7.5:1 vs #FFFFFF */
+      --text-muted: #64748B;     /* 4.8:1 vs #FFFFFF */
+
+      --border-subtle: #E2E8F0;
+      --border-strong: #CBD5E1;
+
+      --accent-primary: #4F46E5; /* 6.2:1 vs #FFFFFF */
+      --accent-hover: #4338CA;
+      --accent-soft: #EEF2FF;
+      --accent-text: #3730A3;    /* 8.9:1 vs #EEF2FF */
+      --accent-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 55%, #0891B2 100%);
+
+      --status-success: #059669;
+      --status-success-soft: #ECFDF5;
+      --status-success-text: #065F46;
+
+      --status-warning: #D97706;
+      --status-warning-soft: #FFFBEB;
+      --status-warning-text: #92400E;
+
+      --status-danger: #DC2626;
+      --status-danger-soft: #FEF2F2;
+      --status-danger-text: #991B1B;
+
+      --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+      --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.14), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+      --shadow-glow: 0 0 0 3px rgba(79, 70, 229, 0.24);
+    }
+
+    .dark {
+      --bg-canvas: #090D16;
+      --bg-surface: #111827;
+      --bg-elevated: #1E293B;
+      --bg-subtle: #161F33;
+
+      --text-primary: #F8FAFC;   /* 16.2:1 vs #111827 */
+      --text-secondary: #94A3B8; /* 6.4:1 vs #111827 */
+      --text-muted: #64748B;     /* 4.5:1 vs #090D16 */
+
+      --border-subtle: #1E293B;
+      --border-strong: #334155;
+
+      --accent-primary: #6366F1;
+      --accent-hover: #818CF8;
+      --accent-soft: rgba(99, 102, 241, 0.16);
+      --accent-text: #C7D2FE;
+      --accent-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 55%, #06B6D4 100%);
+
+      --status-success: #10B981;
+      --status-success-soft: rgba(16, 185, 129, 0.15);
+      --status-success-text: #6EE7B7;
+
+      --status-warning: #F59E0B;
+      --status-warning-soft: rgba(245, 158, 11, 0.15);
+      --status-warning-text: #FCD34D;
+
+      --status-danger: #EF4444;
+      --status-danger-soft: rgba(239, 68, 68, 0.15);
+      --status-danger-text: #FCA5A5;
+
+      --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+      --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.45);
+      --shadow-md: 0 12px 28px -4px rgba(0, 0, 0, 0.55);
+      --shadow-lg: 0 24px 48px -8px rgba(0, 0, 0, 0.7);
+      --shadow-glow: 0 0 0 3px rgba(129, 140, 248, 0.28);
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* Typography Scale Tokens */
+    .type-display { font-size: 2rem; line-height: 2.5rem; letter-spacing: -0.025em; font-weight: 700; }
+    .type-h1 { font-size: 1.5rem; line-height: 2rem; letter-spacing: -0.02em; font-weight: 600; }
+    .type-h2 { font-size: 1.0625rem; line-height: 1.5rem; letter-spacing: -0.015em; font-weight: 600; }
+    .type-body { font-size: 0.875rem; line-height: 1.375rem; letter-spacing: -0.005em; font-weight: 400; }
+    .type-small { font-size: 0.8125rem; line-height: 1.25rem; font-weight: 500; }
+    .type-caption { font-size: 0.75rem; line-height: 1.125rem; letter-spacing: 0.01em; font-weight: 500; }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1, "cv05" 1;
+    }
+
+    .bg-accent-gradient {
+      background-image: var(--accent-gradient);
+    }
+
+    .focus-ring:focus-visible {
+      outline: none;
+      box-shadow: var(--shadow-glow);
+    }
+
+    @keyframes drawLine {
+      from { stroke-dashoffset: 400; }
+      to { stroke-dashoffset: 0; }
+    }
+    .chart-draw {
+      stroke-dasharray: 400;
+      animation: drawLine 750ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes shimmer {
+      0% { opacity: 0.45; }
+      50% { opacity: 0.9; }
+      100% { opacity: 0.45; }
+    }
+    .skeleton-pulse {
+      animation: shimmer 1.4s ease-in-out infinite;
+      background-color: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .chart-draw { stroke-dasharray: none; }
+    }
+
+/* live help: the waveform of a call */
+.sup-wave { display: flex; align-items: center; justify-content: center; gap: 3px; height: 40px; }
+.sup-wave i { display: block; width: 4px; height: 100%; border-radius: 3px; background: linear-gradient(180deg, #818cf8, #a855f7); transform: scaleY(0.2); animation: sup-bar 1.15s ease-in-out infinite; animation-delay: calc(var(--i) * -0.09s); }
+.sup-wave.driven i { animation: none; transform: scaleY(var(--h, 0.15)); transition: transform 0.09s linear; }
+@keyframes sup-bar { 0%, 100% { transform: scaleY(0.18); } 50% { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) { .sup-wave i { animation: none; transform: scaleY(0.5); } }
+
+/* dark mode: typed text, fields and dropdown lists must follow the theme (the browser default is white) */
+.dark { color-scheme: dark; }
+.dark input, .dark textarea, .dark select {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  color-scheme: dark;
+}
+.dark input::placeholder, .dark textarea::placeholder { color: var(--text-muted); opacity: 1; }
+.dark select option, .dark select optgroup { background-color: var(--bg-elevated); color: var(--text-primary); }
+.dark input:-webkit-autofill { -webkit-text-fill-color: var(--text-primary); box-shadow: 0 0 0 100px var(--bg-subtle) inset; }

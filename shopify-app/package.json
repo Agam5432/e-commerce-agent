@@ -1,0 +1,26 @@
+{
+  "name": "ai-commerce-agent",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "extensions/*"
+  ],
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "test:widget": "node tests/widget/e2e.mjs && node tests/widget/voice.mjs && node tests/widget/barge-in.mjs && node tests/widget/stale-customer.mjs && node tests/widget/chat-without-backend-url.mjs && node tests/widget/slow-greeting-and-long-input.mjs && node tests/widget/chat-timeout.mjs && node tests/widget/mic-errors.mjs && node tests/widget/low-severity.mjs",
+    "check": "node --check extensions/ai-chat-widget/assets/ai-chat-widget.js"
+  },
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ],
+  "author": "Agam Tyagi",
+  "private": true,
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "mini-agent",
+  "version": "2.1.0",
+  "description": "Shopify AI commerce agent (LangGraph) + voice",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "check": "npm run lint && npm test",
+    "check:shopify": "node scripts/check-shopify.mjs",
+    "build:admin": "tailwindcss -c tailwind.config.cjs -i admin-ui/input.css -o src/public/admin/app.css --minify",
+    "test:widget": "npm --prefix shopify-app run test:widget",
+    "check:widget": "npm --prefix shopify-app run check"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@langchain/core": "^1.3.4",
+    "@langchain/langgraph": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "groq-sdk": "^0.15.0",
+    "mongoose": "^8.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^10.3.1",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "lucide": "^0.453.0",
+    "mingo": "^7.2.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

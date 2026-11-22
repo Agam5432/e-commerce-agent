@@ -1,0 +1,45 @@
+client_id = "0173296be76c77b39ba2d59cf1aa68c5"
+name = "AI Commerce Agent"
+application_url = "https://violin-mayflower-sandstorm.ngrok-free.dev"
+embedded = true
+
+[webhooks]
+api_version = "2026-10"
+
+  # Orders that began in the chat are counted for the store owner.
+  [[webhooks.subscriptions]]
+  topics = [ "orders/create" ]
+  uri = "/api/shopify/webhooks/orders-create"
+
+  # A cancelled order stops counting as an order and as revenue.
+  [[webhooks.subscriptions]]
+  topics = [ "orders/cancelled" ]
+  uri = "/api/shopify/webhooks/orders-cancelled"
+
+  # A refund lowers the order's revenue (the amount is read back from Shopify, never worked out here).
+  [[webhooks.subscriptions]]
+  topics = [ "refunds/create" ]
+  uri = "/api/shopify/webhooks/refunds-create"
+
+  # Shopify's mandatory privacy topics (customer data request, customer erase, shop erase).
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/data_request", "customers/redact", "shop/redact" ]
+  uri = "/api/shopify/webhooks/compliance"
+
+[access_scopes]
+scopes = "read_products,read_inventory,read_locations,read_customers,write_customers,read_orders,write_orders,read_draft_orders,write_draft_orders,read_discounts,read_legal_policies"
+optional_scopes = []
+use_legacy_install_flow = false
+
+[auth]
+redirect_urls = [
+  "https://violin-mayflower-sandstorm.ngrok-free.dev/api/shopify/oauth/callback"
+]
+
+[sidekick]
+extensions_summary = "Review customer chats and voice conversations with the AI shopping assistant, including photos and files customers sent, and see how many orders began in chat"
+
+[app_proxy]
+url = "https://violin-mayflower-sandstorm.ngrok-free.dev/proxy"
+prefix = "apps"
+subpath = "ai-agent"

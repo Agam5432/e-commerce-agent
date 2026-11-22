@@ -1,0 +1,35 @@
+{
+ "checkedAt": "2026-11-14T20:18:40.922Z",
+ "shop": "techstore-3qkasoly.myshopify.com",
+ "status": "DONE",
+ "notes": [
+  "sample live prices: Apple iPhone 15 = 750 USD | Samsung Galaxy A55 5G = 429 USD | Ambrane 10000mAh Power Bank = 15 USD"
+ ],
+ "checks": [
+  {
+   "name": "L01 shop identity and currency",
+   "ok": true,
+   "note": "TechStore, currency USD, timezone America/New_York"
+  },
+  {
+   "name": "L02 live catalog size",
+   "ok": true,
+   "note": "328 products (326 active) live vs 124 in the recording"
+  },
+  {
+   "name": "L03 prices: live vs the recording used by the tests",
+   "ok": false,
+   "note": "124 differ, e.g. Twilight Plum Ribbon Dress: live 65 vs recorded 6300; Savannah Maxi Dress: live 49 vs recorded 4700; Seamless Nursing Bra: live 59 vs recorded 5700"
+  },
+  {
+   "name": "L04 recorded products that no longer exist live",
+   "ok": true,
+   "note": "none missing"
+  },
+  {
+   "name": "L05 are there real customers/orders in the store (counts only)",
+   "ok": true,
+   "note": "orders: 25, customers: 6"
+  }
+ ]
+}

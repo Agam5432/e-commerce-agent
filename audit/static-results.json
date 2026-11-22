@@ -1,0 +1,211 @@
+[
+ {
+  "id": "S01",
+  "cat": "Static code audit",
+  "title": "Hardcoded API keys / tokens / DB credentials in tracked files",
+  "sev": "CRITICAL",
+  "status": "PASS",
+  "note": "no secret pattern in code, docs, configs or the widget",
+  "evidence": []
+ },
+ {
+  "id": "S02",
+  "cat": "Static code audit",
+  "title": ".env or its backups tracked by git",
+  "sev": "CRITICAL",
+  "status": "PASS",
+  "note": ".env is git-ignored and not tracked (the real file was not read for this check beyond key names)",
+  "evidence": []
+ },
+ {
+  "id": "S03",
+  "cat": "Static code audit",
+  "title": "Hardcoded store domains in backend code",
+  "sev": "MEDIUM",
+  "status": "PASS",
+  "note": "no literal store domain used for logic (only validation patterns)",
+  "evidence": []
+ },
+ {
+  "id": "S04",
+  "cat": "Static code audit",
+  "title": "Hardcoded external URLs / origins in backend code",
+  "sev": "LOW",
+  "status": "PASS",
+  "note": "reviewed every hit: only Shopify's own fixed domains (admin.shopify.com in the CSP frame-ancestors and dashboard links, the shop's own /admin/oauth and /admin/api endpoints) and a validation message; no customer-specific or environment-specific literal",
+  "evidence": [
+   "src/config/env.js:94: if (isSet(env, \"SENTRY_DSN\") && !/^https:\\/\\/[^@\\s]+@[^/\\s]+\\/\\d+$/.test(String(env.SENTRY_DSN))) errors.push(\"SENTRY_DSN does not look like",
+   "src/http/hardening.js:17: res.setHeader(\"Content-Security-Policy\", \"frame-ancestors https://*.myshopify.com https://admin.shopify.com;\");",
+   "src/industries/ecommerce/systemPrompt.js:399: - Order, cart and payment summaries: one bullet each for items, delivery, total and payment method. A payment or tracking link is written as",
+   "src/public/admin/lib/orders.js:135: shopifyUrl: order?.shopifyId && handle ? `https://admin.shopify.com/store/${handle}/orders/${order.shopifyId}` : '',",
+   "src/public/admin/screens/widget.js:15: const editor = `https://admin.shopify.com/store/${encodeURIComponent(storeHandle())}/themes/current/editor?context=apps&activateAppId=${enco",
+   "src/public/admin/screens/widget.js:28: <a href=\"https://${esc(state.store.shop)}\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"px-3.5 py-2 rounded-md text-xs font-medium borde",
+   "src/routes/shopifyOAuthRoutes.js:318: return fetch(`https://${shop}/admin/oauth/access_token`, {",
+   "src/routes/shopifyOAuthRoutes.js:399: return fetch(`https://${normalizedShop}/admin/oauth/access_token`, {",
+   "src/routes/shopifyOAuthRoutes.js:467: const authorizeUrl = new URL(`https://${shop}/admin/oauth/authorize`);",
+   "src/services/objectStorage.js:53: if (!/^https?:\\/\\//.test(endpoint)) throw new Error(\"S3_ENDPOINT must start with https://\");",
+   "src/services/shopifyAdminService.js:22: response = await fetch(`https://${domain}/admin/api/${process.env.SHOPIFY_API_VERSION || \"2026-10\"}/graphql.json`, {",
+   "src/services/shopifyCustomerService.js:10: `https://${domain}/admin/api/${API_VERSION}/graphql.json`,"
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "S05",
+  "cat": "Static code audit",
+  "title": "Tenant (shop) taken from client input outside OAuth/entry",
+  "sev": "CRITICAL",
+  "status": "PASS",
+  "note": "the shop is only taken from the signed proxy, session token or HMAC-verified webhook (OAuth/entry are the only client-supplied shop reads, both verified)",
+  "evidence": []
+ },
+ {
+  "id": "S06",
+  "cat": "Static code audit",
+  "title": "Request values placed directly in MongoDB filters (operator injection)",
+  "sev": "HIGH",
+  "status": "PASS",
+  "note": "no direct req.* in a filter on one line (multi-line cases need review; chat inputs were also tested with {$ne} objects in M07/M08)",
+  "evidence": []
+ },
+ {
+  "id": "S07",
+  "cat": "Static code audit",
+  "title": "Dynamic code execution / shell use in backend",
+  "sev": "HIGH",
+  "status": "PASS",
+  "note": "none in backend code",
+  "evidence": []
+ },
+ {
+  "id": "S08",
+  "cat": "Static code audit",
+  "title": "Personal data or secrets possibly written to logs",
+  "sev": "MEDIUM",
+  "status": "PASS",
+  "note": "reviewed every hit: logs carry fixed text, status codes, store domains or redacted addresses; the token-refresh logs print domain/status/error name only, never a token",
+  "evidence": [
+   "server.js:232: console.log(\"WebSocket connection rejected: missing or invalid voice token\");",
+   "shopify-app/extensions/ai-chat-widget/assets/ai-chat-widget.js:4449: console.error(\"Voice token request failed:\", error);",
+   "shopify-app/extensions/ai-chat-widget/assets/ai-chat-widget.js:4538: console.error(\"Voice microphone setup failed:\", error);",
+   "src/agent/agent.js:802: console.warn(\"[guard] the reply is in another language than the shopper's message; asking the AI to rewrite it\");",
+   "src/industries/ecommerce/handlers/checkout.js:887: console.log(`[email] order ${orderId} was already placed (repeat request): confirmation not sent again.`);",
+   "src/routes/shopifyOAuthRoutes.js:538: console.error(\"Shopify token exchange failed:\", tokenResponse.status);",
+   "src/services/emailService.js:89: console.log(`[email] OTP sent to ${redact(to)}`);",
+   "src/services/shopifyTokenService.js:105: console.error(\"[Shopify token refresh fetch failed]\", {",
+   "src/services/shopifyTokenService.js:131: console.error(\"[Shopify token refresh rejected]\", {"
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "S09",
+  "cat": "Static code audit",
+  "title": "Raw exception text returned to the client",
+  "sev": "MEDIUM",
+  "status": "PASS",
+  "note": "reviewed: the only hit returns SettingsConflictError's own fixed message (409), not an exception text",
+  "evidence": [
+   "src/admin/routes.js:302: if (error?.name === \"SettingsConflictError\") return res.status(409).json({ error: error.message });"
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "S10",
+  "cat": "Static code audit",
+  "title": "CORS that reflects any origin",
+  "sev": "LOW",
+  "status": "FAIL",
+  "note": "OAuth routes use cors({ origin: true, credentials: true }) (src/routes/shopifyOAuthRoutes.js:19-21): any origin is reflected WITH credentials. Not exploitable today because every route authenticates by a bearer session token, never a cookie; still an anti-pattern. The dashboard router (origin: true, credentials: false) is by design.",
+  "evidence": [
+   "src/admin/routes.js:74: origin: true,",
+   "src/routes/shopifyOAuthRoutes.js:20: origin: true,"
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "S11",
+  "cat": "Static code audit",
+  "title": "Shopper-facing routes without a rate limiter on the route line",
+  "sev": "MEDIUM",
+  "status": "PASS",
+  "note": "reviewed: GET /proxy/ only returns the static backend address; POST /api/uploads is authorised by a one-time upload token (consumed on use) issued by a rate-limited route",
+  "evidence": [
+   "src/routes/shopifyProxyRoutes.js:133: router.get(\"/\", (req, res) => {",
+   "src/routes/uploadRoutes.js:90: router.post("
+  ],
+  "reviewed": true
+ },
+ {
+  "id": "S12",
+  "cat": "Static code audit",
+  "title": "Duplicated Shopify GraphQL clients (different timeouts and error handling)",
+  "sev": "LOW",
+  "status": "FAIL",
+  "note": "3 separate implementations: a fix in one is missed in the others",
+  "evidence": [
+   "src/services/shopifyAdminService.js:11: export async function adminGraphql(shop, query, variables = {}) {",
+   "src/services/shopifyCustomerService.js:5: async function adminGraphql(shop, query, variables = {}) {",
+   "src/tools/shopify/client.js:106: async function shopifyGraphQL(credentials, query, variables = {}, retried = false) {"
+  ]
+ },
+ {
+  "id": "S13",
+  "cat": "Static code audit",
+  "title": "Shopify API version defined in several places",
+  "sev": "LOW",
+  "status": "FAIL",
+  "note": "5 definitions of the Admin API version",
+  "evidence": [
+   "src/agent/claudeAdapter.js:6: const API_VERSION = \"2023-06-01\";",
+   "src/services/shopifyAdminService.js:22: response = await fetch(`https://${domain}/admin/api/${process.env.SHOPIFY_API_VERSION || \"2026-10\"}/graphql.json`, {",
+   "src/services/shopifyCustomerService.js:3: const API_VERSION = process.env.SHOPIFY_API_VERSION || \"2026-10\";",
+   "src/services/storeIntegrationService.js:7: const API_VERSION = process.env.SHOPIFY_API_VERSION || \"2026-10\";",
+   "src/tools/shopify/client.js:6: const API_VERSION = process.env.SHOPIFY_API_VERSION || \"2026-10\";"
+  ]
+ },
+ {
+  "id": "S14",
+  "cat": "Static code audit",
+  "title": "Widget stores customer details in localStorage",
+  "sev": "LOW",
+  "status": "FAIL",
+  "note": "customer details are kept on the device for up to 24 h (cleared when the page shows no login signal since the earlier fix)",
+  "evidence": [
+   "shopify-app/extensions/ai-chat-widget/assets/ai-chat-widget.js:266: localStorage.setItem(\"ai_commerce_customer_\" + storeDomain, JSON.stringify({"
+  ]
+ },
+ {
+  "id": "S15",
+  "cat": "Static code audit",
+  "title": "Voice WebSocket handshake is authenticated before audio",
+  "sev": "HIGH",
+  "status": "PASS",
+  "note": "verifyClient checks a one-time token in the subprotocol (also exercised by M23/M24)",
+  "evidence": [
+   "src/voice/voiceAuth.js:8: import { tokenReplayGuard } from \"../services/tokenReplay.js\";",
+   "src/voice/voiceAuth.js:37: export async function authorizeVoiceUpgrade(req, { guard = tokenReplayGuard(), allowUrlToken } = {}) {",
+   "src/voice/voiceAuth.js:42: if (!(await guard.consume(claims.jti, claims.exp))) return null;",
+   "src/voice/voiceAuth.js:59: verifyClient: (info, done) => {"
+  ]
+ },
+ {
+  "id": "S16",
+  "cat": "Static code audit",
+  "title": "Dependency vulnerabilities (npm audit, production)",
+  "sev": "HIGH",
+  "status": "PASS",
+  "note": "npm audit: 0 vulnerabilities",
+  "evidence": []
+ },
+ {
+  "id": "S17",
+  "cat": "Static code audit",
+  "title": "Widget writes unescaped values with innerHTML",
+  "sev": "HIGH",
+  "status": "PASS",
+  "note": "reviewed: the only hit restores the send button's own previously captured HTML",
+  "evidence": [
+   "shopify-app/extensions/ai-chat-widget/assets/ai-chat-widget.js:4777: send.innerHTML = originalButtonHtml;"
+  ],
+  "reviewed": true
+ }
+]

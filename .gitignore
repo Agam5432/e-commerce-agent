@@ -1,0 +1,15 @@
+node_modules/
+# shopper files and upload temp files never go into git
+uploads/
+.env
+.env.*
+!.env.example
+
+
+coverage/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+e2e-output/

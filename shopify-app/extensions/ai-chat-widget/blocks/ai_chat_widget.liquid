@@ -1,0 +1,327 @@
+<div id="ai-commerce-chat-root-{{ block.id }}"
+     class="ai-commerce-chat-root"
+     data-block-id="{{ block.id }}"
+     data-store-domain="{{ shop.permanent_domain }}"
+     data-api-url="{{ block.settings.api_url | escape }}"
+     data-shop-name="{{ shop.name | escape }}"
+     data-greeting="{{ block.settings.fallback_greeting | escape }}"
+     data-customer-logged-in="{% if customer %}true{% else %}false{% endif %}"
+     data-customer-id="{{ customer.id | escape }}"
+     data-customer-email="{{ customer.email | escape }}"
+     data-customer-first-name="{{ customer.first_name | escape }}"
+     data-customer-last-name="{{ customer.last_name | escape }}"
+     data-customer-name="{% if customer.name != blank %}{{ customer.name | escape }}{% elsif customer.first_name != blank %}{{ customer.first_name | escape }} {{ customer.last_name | escape }}{% endif %}"
+     data-customer-phone="{% if customer.phone != blank %}{{ customer.phone | escape }}{% elsif customer.default_address.phone != blank %}{{ customer.default_address.phone | escape }}{% endif %}"
+     data-customer-address1="{{ customer.default_address.address1 | escape }}"
+     data-customer-address2="{{ customer.default_address.address2 | escape }}"
+     data-customer-city="{{ customer.default_address.city | escape }}"
+     data-customer-province="{{ customer.default_address.province | escape }}"
+     data-customer-zip="{{ customer.default_address.zip | escape }}"
+     data-customer-country="{{ customer.default_address.country | escape }}"
+     data-customer-addresses-count="{{ customer.addresses_count | default: 0 }}">
+
+  <script type="application/json" class="ai-commerce-customer-json">
+  {% if customer %}
+  {
+    "loggedIn": true,
+    "id": {{ customer.id | json }},
+    "email": {{ customer.email | json }},
+    "firstName": {{ customer.first_name | json }},
+    "lastName": {{ customer.last_name | json }},
+    "name": {{ customer.name | default: customer.first_name | json }},
+    "phone": {{ customer.phone | default: customer.default_address.phone | json }},
+    "defaultAddress": {
+      "address1": {{ customer.default_address.address1 | json }},
+      "address2": {{ customer.default_address.address2 | json }},
+      "city": {{ customer.default_address.city | json }},
+      "province": {{ customer.default_address.province | json }},
+      "zip": {{ customer.default_address.zip | json }},
+      "country": {{ customer.default_address.country | json }},
+      "phone": {{ customer.default_address.phone | json }}
+    }
+  }
+  {% else %}
+  {
+    "loggedIn": false
+  }
+  {% endif %}
+  </script>
+
+  <!-- Floating 3D Robot Launcher Button (No text, continuous float, double eye-blink + 5s pause + right-hand hello wave) -->
+  <div class="ai-commerce-teaser" hidden>
+    <button type="button" class="ai-commerce-teaser-x" aria-label="Dismiss">&#10005;</button>
+    <p class="ai-commerce-teaser-text" aria-live="polite"></p>
+    <span class="ai-commerce-teaser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+  </div>
+  <button type="button"
+          class="ai-commerce-chat-toggle"
+          aria-label="Open Orbi AI shopping assistant"
+          aria-expanded="false">
+    <span class="ai-commerce-bot-live" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="ai-commerce-bot-unread" hidden></span>
+    <span class="ai-commerce-bot-mascot" aria-hidden="true">
+      <svg class="ai-commerce-bot-svg" viewBox="60 35 370 385" width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="ai-bot-eye-left-{{ block.id }}" cx="38%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#a5f3fc"/>
+            <stop offset="55%" stop-color="#61d9eb"/>
+            <stop offset="100%" stop-color="#38bdf8"/>
+          </radialGradient>
+          <radialGradient id="ai-bot-eye-right-{{ block.id }}" cx="38%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#cffafe"/>
+            <stop offset="55%" stop-color="#8be4f2"/>
+            <stop offset="100%" stop-color="#5ce1e6"/>
+          </radialGradient>
+        </defs>
+        <!-- 3D Robot Body, Head (with smile) & Stationary Arm. The pictures are set by ai-chat-widget.js (they are inside it), so no image file can be missing. -->
+        <image class="ai-commerce-bot-body-img"
+               x="0" y="0" width="450" height="450" />
+        <!-- Animated Double-Blinking Cyan Eyes (Centered at 224.5, 130) -->
+        <g transform="translate(224.5, 130)">
+          <g class="ai-commerce-bot-eyes-blink">
+            <circle cx="-37" cy="0" r="14.2" fill="url(#ai-bot-eye-left-{{ block.id }})" />
+            <circle cx="37" cy="0" r="14.2" fill="url(#ai-bot-eye-right-{{ block.id }})" />
+          </g>
+        </g>
+        <!-- Animated Right Hand Waving "Hello" (Shoulder Pivot at 324, 260) -->
+        <g transform="translate(324, 260)">
+          <g class="ai-commerce-bot-arm-wave">
+            <image class="ai-commerce-bot-arm-img"
+                   x="-24" y="-20" width="66" height="122" />
+          </g>
+        </g>
+      </svg>
+    </span>
+  </button>
+
+  <!-- Spacious Soft-Gradient Chat Panel -->
+  <section class="ai-commerce-chat-panel" hidden aria-label="Orbi AI shopping assistant">
+
+    <!-- Floating Cart Notification Toast -->
+    <div class="ai-commerce-cart-toast" hidden role="status" aria-live="polite">
+      <span class="ai-commerce-cart-toast-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </span>
+      <span class="ai-commerce-cart-toast-text"></span>
+    </div>
+
+    <!-- Soft Frosted Header -->
+    <header class="ai-commerce-chat-header">
+      <div class="ai-commerce-chat-brand">
+        <span class="ai-commerce-chat-avatar" aria-hidden="true">
+          <svg class="ai-commerce-chat-sparkle" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            <path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+          </svg>
+          <span class="ai-commerce-chat-online-dot"></span>
+        </span>
+
+        <div class="ai-commerce-chat-heading">
+          <div class="ai-commerce-chat-heading-row">
+            <strong class="ai-commerce-chat-title">Orbi AI</strong>
+            <span class="ai-commerce-chat-badge">Assistant</span>
+            <span class="ai-commerce-chat-live">LIVE</span>
+          </div>
+          <p class="ai-commerce-chat-subtitle">
+            <span>Shopping Assistant</span>
+            <span class="ai-commerce-chat-dot-sep">•</span>
+            <span class="ai-commerce-chat-shop-name">{{ shop.name | escape }}</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="ai-commerce-chat-header-actions">
+        <select class="ai-commerce-chat-lang-select" aria-label="Reply language" title="Reply language">
+          <option value="">Auto</option>
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+        </select>
+
+        <a class="ai-commerce-chat-cart" href="{{ routes.cart_url }}" aria-label="View cart" title="View cart">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span class="ai-commerce-chat-cart-count" hidden>0</span>
+        </a>
+
+        <div class="ai-commerce-chat-menu-wrap">
+          <button type="button"
+                  class="ai-commerce-chat-menu-btn"
+                  aria-label="More options"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  title="More options">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/>
+            </svg>
+          </button>
+
+          <div class="ai-commerce-chat-menu" hidden role="menu">
+            <button type="button" class="ai-commerce-chat-menu-item ai-commerce-chat-menu-clear" role="menuitem">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+              <span data-i18n="clearChat">Clear chat</span>
+            </button>
+            <div class="ai-commerce-chat-menu-footer">
+              <a href="/policies/terms-of-service" target="_blank" rel="noopener">Terms of Use</a>
+              <a href="/policies/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+            </div>
+            <p class="ai-commerce-chat-menu-disclaimer">{{ shop.name | escape }} AI uses AI, so it may occasionally make mistakes</p>
+          </div>
+        </div>
+
+        <button type="button"
+                class="ai-commerce-chat-minimize"
+                aria-label="Minimize chat"
+                title="Minimize">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+
+        <button type="button" class="ai-commerce-chat-close" aria-label="Close chat" title="Close">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="ai-commerce-confirm" hidden role="alertdialog" aria-modal="true" aria-labelledby="ai-commerce-confirm-title-{{ block.id }}">
+      <div class="ai-commerce-confirm-card">
+        <h3 id="ai-commerce-confirm-title-{{ block.id }}" data-i18n="clearTitle">Clear this chat?</h3>
+        <p data-i18n="clearBody">This removes the conversation from your screen. The store keeps a copy so its team can help you if needed. Your cart is not affected.</p>
+        <div class="ai-commerce-confirm-actions">
+          <button type="button" class="ai-commerce-confirm-no" data-i18n="cancel">Cancel</button>
+          <button type="button" class="ai-commerce-confirm-yes" data-i18n="clearConfirm">Clear chat</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Messages Feed -->
+    <div class="ai-commerce-chat-messages" aria-live="polite">
+      <div class="ai-commerce-welcome-banner"><span data-i18n="today">Today</span></div>
+
+      <!-- The opening message is written by the AI when the chat opens (see ai-chat-widget.js). -->
+    </div>
+
+    <!-- Voice call strip: connection + timer + mic state, flowing waves, mute and end call. -->
+    <div class="ai-commerce-chat-voice" data-voice-state="listening" aria-hidden="true">
+      <div class="ai-commerce-voice-top">
+        <div class="ai-commerce-voice-call">
+          <span class="ai-commerce-voice-dot"></span>
+          <strong data-i18n="connected">Connected</strong>
+          <span class="ai-commerce-voice-timer">00:00</span>
+          <span class="ai-commerce-voice-micpill" data-s="on"></span>
+        </div>
+        <div class="ai-commerce-voice-actions">
+          <button type="button" class="ai-commerce-voice-attach" aria-label="Attach photos or videos" title="Attach photos or videos">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5 5 0 0 1-7.1-7.1l8.6-8.6a3.4 3.4 0 0 1 4.8 4.8l-8.6 8.6a1.7 1.7 0 0 1-2.4-2.4l7.9-7.9"/></svg>
+          </button>
+          <button type="button" class="ai-commerce-voice-center-mic" aria-pressed="false"></button>
+          <button type="button" class="ai-commerce-voice-end">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14c5-5 13-5 18 0l-2.5 2.5-3-1.5v-2.6a11 11 0 0 0-7 0V15l-3 1.5z"/></svg>
+            <span data-i18n="endCall">End call</span>
+          </button>
+        </div>
+      </div>
+      <canvas class="ai-commerce-voice-wave" width="760" height="80" aria-hidden="true"></canvas>
+      <div class="ai-commerce-voice-text">
+        <strong class="ai-commerce-chat-voice-label"></strong>
+        <span class="ai-commerce-voice-caption"></span>
+      </div>
+    </div>
+
+    <div class="ai-commerce-chat-status" role="status"></div>
+
+    <!-- Bottom Input Bar -->
+    <div class="ai-commerce-chat-chips" role="group" aria-label="Suggestions" hidden></div>
+    <div class="ai-commerce-tray" hidden>
+      <div class="ai-commerce-tray-files"></div>
+      <div class="ai-commerce-tray-bar"><small class="ai-commerce-tray-note"></small><button type="button" class="ai-commerce-tray-clear" aria-label="Remove all">&#10005;</button></div>
+    </div>
+    <form class="ai-commerce-chat-form">
+      <div class="ai-commerce-chat-input-wrap">
+        <input class="ai-commerce-chat-input"
+               type="text"
+               placeholder="Ask me anything..."
+               aria-label="Your message"
+               maxlength="2000"
+               autocomplete="off">
+      </div>
+      <button type="button" class="ai-commerce-chat-attach" aria-label="Attach photos or videos" title="Attach photos or videos">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5 5 0 0 1-7.1-7.1l8.6-8.6a3.4 3.4 0 0 1 4.8 4.8l-8.6 8.6a1.7 1.7 0 0 1-2.4-2.4l7.9-7.9"/></svg>
+      </button>
+      <input class="ai-commerce-chat-file" type="file" accept="image/*,video/*,application/pdf" multiple hidden>
+      <button type="button"
+              class="ai-commerce-chat-mic"
+              aria-label="Start voice input"
+              title="Enable Microphone"></button>
+      <button type="submit" class="ai-commerce-chat-send" aria-label="Send message" title="Send Message">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
+        </svg>
+      </button>
+    </form>
+  </section>
+</div>
+
+<script>
+/* Keep chat open across page changes: apply before deferred widget JS loads */
+(function () {
+  try {
+    var domain = {{ shop.permanent_domain | json }};
+    var openKey = "ai_commerce_chat_" + domain + "_open";
+    function readCookie(name) {
+      var match = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "=([^;]*)"));
+      return match ? decodeURIComponent(match[1]) : "";
+    }
+    var shouldOpen =
+      localStorage.getItem(openKey) === "1" ||
+      sessionStorage.getItem(openKey) === "1" ||
+      readCookie(openKey) === "1";
+    if (!shouldOpen) return;
+    var root = document.getElementById("ai-commerce-chat-root-{{ block.id }}");
+    if (!root) return;
+    var panel = root.querySelector(".ai-commerce-chat-panel");
+    var toggle = root.querySelector(".ai-commerce-chat-toggle");
+    if (panel) {
+      panel.hidden = false;
+      panel.removeAttribute("hidden");
+    }
+    var minKey = "ai_commerce_chat_" + domain + "_minimized";
+    var isMin =
+      localStorage.getItem(minKey) === "1" ||
+      sessionStorage.getItem(minKey) === "1";
+    if (isMin && panel) panel.classList.add("is-minimized");
+    if (toggle) toggle.setAttribute("aria-expanded", isMin ? "false" : "true");
+  } catch (e) {}
+})();
+</script>
+
+{{ 'ai-chat-widget.css' | asset_url | stylesheet_tag }}
+{{ 'ai-chat-widget-support.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ai-chat-widget.js' | asset_url }}" defer></script>
+<script src="{{ 'ai-chat-widget-support.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "AI Chat Widget",
+  "target": "body",
+  "settings": [
+    {
+      "type": "url",
+      "id": "api_url",
+      "label": "Chat backend URL"
+    },
+    {
+      "type": "textarea",
+      "id": "fallback_greeting",
+      "label": "Greeting if the AI is unreachable",
+      "info": "The assistant normally writes its own opening message. This text is shown only when the AI cannot be reached. Leave empty to show nothing."
+    }
+  ]
+}
+{% endschema %}

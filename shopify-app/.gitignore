@@ -1,0 +1,8 @@
+node_modules/
+.shopify/
+.env
+.env.*
+*.log
+.DS_Store
+tests/widget/.page.html
+tests/widget/node_modules/

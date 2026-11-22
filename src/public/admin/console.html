@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Calls</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/admin/app.css" />
+  <script src="/admin/vendor/lucide.min.js"></script>
+</head>
+<body class="antialiased bg-canvas text-ink-primary min-h-screen">
+  <!-- The call window: Shopify's admin gives an embedded app no microphone, so team members take calls here. -->
+  <main class="max-w-2xl mx-auto p-4 sm:p-6 space-y-4">
+    <header class="flex items-center justify-between gap-3">
+      <div class="min-w-0 flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-accent-gradient text-white flex items-center justify-center shrink-0"><i data-lucide="headphones" class="w-5 h-5"></i></span><div class="min-w-0"><h1 class="type-h2 truncate" id="console-store">Calls</h1><p class="type-caption text-ink-secondary">Orbi AI · keep this window open while you are taking calls.</p></div></div>
+      <div id="support-presence" hidden></div>
+    </header>
+
+    <section id="console-start" class="rounded-lg border border-line-subtle bg-surface p-4 space-y-3">
+      <p class="text-xs text-ink-secondary" id="console-status">Signing in…</p>
+      <label class="block text-xs font-medium">Your name, as shoppers will see it on a call
+        <input id="console-name" maxlength="80" autocomplete="name" class="mt-1 w-full px-3 py-2 text-sm rounded-md border border-line-subtle bg-subtle/40 focus-ring" placeholder="For example: Asha from support" />
+      </label>
+      <button type="button" id="console-go" disabled class="w-full px-3 py-2.5 rounded-md text-sm font-semibold bg-accent-gradient text-white disabled:opacity-50">Start taking calls</button>
+      <p class="text-[11px] text-ink-muted">Your browser will ask for the microphone when you answer a call. The camera is never used.</p>
+    </section>
+
+    <div id="support-incoming" hidden class="flex flex-col gap-3 items-stretch"></div>
+    <aside id="support-dock" hidden aria-label="Call in progress" class="rounded-lg bg-surface border border-line-strong shadow-md overflow-hidden"></aside>
+    <div id="console-home" hidden class="space-y-4"></div>
+  </main>
+  <div id="toast-container" class="fixed top-3 right-3 z-[60] flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+  <script type="module" src="/admin/console.js"></script>
+</body>
+</html>
