@@ -4,7 +4,7 @@
 # Never put a secret value in this file: it is in git.
 services:
   - type: web
-    name: orbi-backend
+    name: techstore-agent
     runtime: docker
     dockerfilePath: ./Dockerfile
     # Free plan: sleeps after 15 idle minutes, next shopper waits about a minute. Change to starter to keep it always on.
