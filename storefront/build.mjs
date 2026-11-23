@@ -64,6 +64,8 @@ export function build() {
     cpSync(join(widgetDir, "assets", f), join(dist, "widget", f));
   }
   for (const f of ["styles.css", "shim.js", "app.js"]) cpSync(join(here, "src", f), join(dist, f));
+  // optional one-off files (e.g. a product import CSV) published under /import/
+  if (existsSync(join(here, "src", "import"))) cpSync(join(here, "src", "import"), join(dist, "import"), { recursive: true });
   const widget = buildWidgetMarkup(readFileSync(join(widgetDir, "blocks", "ai_chat_widget.liquid"), "utf8"));
   const page = readFileSync(join(here, "src", "index.html"), "utf8")
     .replace(/__SHOP_NAME__/g, escapeHtml(SHOP_NAME))
