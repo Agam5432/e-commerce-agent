@@ -55,10 +55,6 @@ services:
     runtime: static
     buildCommand: node storefront/build.mjs
     staticPublishPath: ./storefront/dist
-    headers:
-      - path: /import/*
-        name: Access-Control-Allow-Origin
-        value: "*"
     autoDeploy: true
     envVars:
       - key: STOREFRONT_SHOP
