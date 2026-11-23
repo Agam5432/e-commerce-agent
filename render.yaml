@@ -55,15 +55,3 @@ services:
     runtime: static
     buildCommand: node storefront/build.mjs
     staticPublishPath: ./storefront/dist
-    headers:
-      - path: /import/*
-        name: Access-Control-Allow-Origin
-        value: "*"
-    autoDeploy: true
-    envVars:
-      - key: STOREFRONT_SHOP
-        value: techstore-3qkasoly.myshopify.com
-      - key: STOREFRONT_NAME
-        value: TechStore
-      - key: STOREFRONT_BACKEND_URL
-        value: https://techstore-agent.onrender.com
