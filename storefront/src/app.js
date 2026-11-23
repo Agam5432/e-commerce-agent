@@ -10,6 +10,7 @@
     if (!url) return "";
     return url + (url.indexOf("?") > -1 ? "&" : "?") + "width=" + (w || 500);
   }
+  function vend(p) { return /test|demo|dummy/i.test(p.vendor || "") ? "" : p.vendor; }
   function pic(p, w, lazy) {
     var src = p.image ? img(p.image, w) : Look.art(p);
     return '<img src="' + esc(src) + '" alt="' + esc(p.title) + '"' + (lazy ? ' loading="lazy"' : "") + ' width="500" height="500">';
@@ -51,7 +52,7 @@
     var from = p.variants.length > 1 ? "From " : "";
     return '<article class="card"><button class="card-img" type="button" data-open="' + esc(p.id) + '" aria-label="View ' + esc(p.title) + '">' +
       pic(p, 500, true) +
-      '</button><div class="card-body">' + (p.vendor ? '<span class="card-vendor">' + esc(p.vendor) + "</span>" : "") +
+      '</button><div class="card-body">' + (vend(p) ? '<span class="card-vendor">' + esc(vend(p)) + "</span>" : "") +
       '<button class="card-title" type="button" data-open="' + esc(p.id) + '">' + esc(p.title) + "</button>" +
       '<div class="price">' + from + fmt(minPrice(p)) + compare + "</div>" +
       '<div class="card-foot"><button class="add" type="button" data-add="' + esc(p.id) + '"' + (v ? "" : " disabled") + ">" +
@@ -101,7 +102,7 @@
     }).join("") + "</div>";
     var pic = v.image || p.image;
     $("modalBody").innerHTML = '<div class="pm"><div class="pm-img">' + (pic ? '<img src="' + esc(img(pic, 800)) + '" alt="' + esc(p.title) + '">' : '<img src="' + Look.art(p) + '" alt="' + esc(p.title) + '">') + "</div><div>" +
-      (p.vendor ? '<span class="card-vendor">' + esc(p.vendor) + "</span>" : "") + '<h3 id="modalTitle">' + esc(p.title) + "</h3>" +
+      (vend(p) ? '<span class="card-vendor">' + esc(vend(p)) + "</span>" : "") + '<h3 id="modalTitle">' + esc(p.title) + "</h3>" +
       '<div class="price">' + fmt(v.price) + (Number(v.compareAtPrice) > Number(v.price) ? "<s>" + fmt(v.compareAtPrice) + "</s>" : "") + "</div>" +
       opts + (p.description ? "<p>" + esc(p.description) + "</p>" : "") +
       '<div class="pm-actions"><button class="btn solid" id="pmAdd" type="button"' + (v.inStock ? "" : " disabled") + ">" + (v.inStock ? "Add to cart" : "Sold out") + "</button>" +
