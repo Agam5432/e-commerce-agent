@@ -87,3 +87,15 @@ main{padding-top:28px;padding-bottom:40px}
 .pm-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:70;background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 @media(max-width:760px){.hero-row{grid-template-columns:1fr;padding:36px 20px}.pm{grid-template-columns:1fr}.search{max-width:none}.brand{font-size:17px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+/* departments + product types */
+.chips{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:thin}
+.chip{white-space:nowrap}
+.chip small{margin-left:4px;font-weight:600;opacity:.6}
+.subs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.subs[hidden]{display:none}
+.sub{padding:6px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;font-weight:600;color:var(--muted)}
+.sub small{margin-left:3px;opacity:.6}
+.sub[aria-pressed=true]{border-color:var(--brand);color:var(--brand);background:#eef2ff}
+.card-img{overflow:hidden}
+.card-img img{transition:transform .35s}
+.card:hover .card-img img{transform:scale(1.04)}

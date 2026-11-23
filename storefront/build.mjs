@@ -63,7 +63,7 @@ export function build() {
   for (const f of ["ai-chat-widget.js", "ai-chat-widget.css", "ai-chat-widget-support.js", "ai-chat-widget-support.css", "thumbs-up.png"]) {
     cpSync(join(widgetDir, "assets", f), join(dist, "widget", f));
   }
-  for (const f of ["styles.css", "shim.js", "app.js"]) cpSync(join(here, "src", f), join(dist, f));
+  for (const f of ["styles.css", "shim.js", "look.js", "app.js"]) cpSync(join(here, "src", f), join(dist, f));
   // optional one-off files (e.g. a product import CSV) published under /import/
   if (existsSync(join(here, "src", "import"))) cpSync(join(here, "src", "import"), join(dist, "import"), { recursive: true });
   const widget = buildWidgetMarkup(readFileSync(join(widgetDir, "blocks", "ai_chat_widget.liquid"), "utf8"));
