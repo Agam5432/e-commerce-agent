@@ -21,6 +21,8 @@ test("departments", () => {
   assert.equal(d("abayas"), "Modest Wear");
   assert.equal(d("hijabs_and_scarves"), "Modest Wear");
   assert.equal(d("perfumes"), "Fragrance");
+  assert.equal(d("shoes", "Nike Revolution 7 Running Shoes"), "Footwear");
+  assert.equal(d("shoes", "Men's Running Sneakers - Grey"), "Men");
   assert.equal(d("kurti", "Women's Teal Printed Cotton Kurti"), "Women");
 });
 

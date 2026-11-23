@@ -37,10 +37,11 @@
     if (SETS.carry.test(c)) return "Bags & Accessories";
     if (SETS.women.test(c) || /^women/i.test(t)) return "Women";
     if (SETS.men.test(c) || /^men/i.test(t)) return "Men";
-    if (/^(unisex)/i.test(t)) return "Men";
+    if (/^(footwear|shoes)$/.test(c)) return "Footwear";
+    if (/^(jeans|shirt|t_shirt|hoodie|sweater|cardigan|jacket)$/.test(c)) return "Men";
     return "More";
   }
-  var DEPT_ORDER = ["Electronics", "Men", "Women", "Kids", "Modest Wear", "Fragrance", "Bags & Accessories", "Home & Gifts", "Sports", "More"];
+  var DEPT_ORDER = ["Electronics", "Men", "Women", "Kids", "Footwear", "Modest Wear", "Fragrance", "Bags & Accessories", "Home & Gifts", "Sports", "More"];
 
   /* ---------- artwork ---------- */
   var COLORS = {
