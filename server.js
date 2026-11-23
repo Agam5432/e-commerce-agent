@@ -171,6 +171,8 @@ const storefrontCors = cors({ origin: storefrontOriginCheck({ isActive: (host) =
 
 app.use(storefrontCors);
 app.use("/proxy", shopifyProxyRoutes);
+// A standalone website of the store (Render static site): same handlers, one configured store, guests only. Off unless PUBLIC_STOREFRONT_SHOP is set.
+app.use("/public", shopifyProxyRoutes);
 app.use("/api/uploads", uploadRoutes);
 
 // How long to wait after the shopper's words before answering. Gemini Live itself already waits for

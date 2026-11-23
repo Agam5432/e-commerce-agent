@@ -9,6 +9,13 @@ const DEV_HOSTS = new Set(["localhost", "127.0.0.1", "[::1]"]);
 export function storefrontOriginCheck({ isActive, env = process.env, now = Date.now, okForMs = 60_000, refusedForMs = 10_000, maxEntries = 2000 } = {}) {
   const cache = new Map();
   const devAllowed = env.NODE_ENV !== "production" || env.CORS_ALLOW_LOCALHOST === "1";
+  // A standalone website of the store (outside Shopify): exact https origins from PUBLIC_STOREFRONT_ORIGINS.
+  const extraOrigins = new Set(
+    String(env.PUBLIC_STOREFRONT_ORIGINS || "")
+      .split(",")
+      .map((o) => o.trim().replace(/\/+$/, "").toLowerCase())
+      .filter((o) => /^https:\/\/[a-z0-9.-]+(:\d+)?$/.test(o))
+  );
 
   async function allowed(origin) {
     let url;
@@ -19,6 +26,7 @@ export function storefrontOriginCheck({ isActive, env = process.env, now = Date.
     }
     if (DEV_HOSTS.has(url.hostname)) return devAllowed;
     if (url.protocol !== "https:" || url.username || url.password) return false;
+    if (extraOrigins.has(url.origin.toLowerCase())) return true;
     const host = url.hostname.toLowerCase();
     const hit = cache.get(host);
     if (hit && hit.until > now()) return hit.ok;

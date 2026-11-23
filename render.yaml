@@ -31,6 +31,12 @@ services:
       - key: LLM_SECONDARY
         value: claude
 
+      # ---- public storefront (static site below) talks to this backend ----
+      - key: PUBLIC_STOREFRONT_SHOP
+        value: techstore-3qkasoly.myshopify.com
+      - key: PUBLIC_STOREFRONT_ORIGINS
+        value: https://techstore-shop.onrender.com
+
       # ---- the address of this service ----
       - key: APP_URL
         value: https://techstore-agent.onrender.com
@@ -42,3 +48,18 @@ services:
       # SHOPIFY_CLIENT_SECRET, SHOPIFY_TOKEN_ENCRYPTION_KEY, OTP_HMAC_SECRET, ANALYTICS_HMAC_SECRET,
       # GEMINI_API_KEY, ANTHROPIC_API_KEY (optional), EMAIL_USER, EMAIL_APP_PASSWORD.
       # Keep the SAME values as your local .env, or saved Shopify tokens and codes stop working.
+
+  # The customer-facing shop website (products, cart, Orbi chat). Free, always on, no Shopify password.
+  - type: web
+    name: techstore-shop
+    runtime: static
+    buildCommand: node storefront/build.mjs
+    staticPublishPath: ./storefront/dist
+    autoDeploy: true
+    envVars:
+      - key: STOREFRONT_SHOP
+        value: techstore-3qkasoly.myshopify.com
+      - key: STOREFRONT_NAME
+        value: TechStore
+      - key: STOREFRONT_BACKEND_URL
+        value: https://techstore-agent.onrender.com

@@ -74,7 +74,31 @@ export function verifyAppProxySignature(queryString) {
   );
 }
 
+// The store a standalone website (outside Shopify) talks to. Off unless PUBLIC_STOREFRONT_SHOP is set.
+// Visitors there are always guests: no Shopify login is ever claimed, so no personal order data is reachable
+// without the email code, exactly as for a guest on the Shopify storefront.
+export function publicStorefrontShop(env = process.env) {
+  const shop = String(env.PUBLIC_STOREFRONT_SHOP || "").trim().toLowerCase();
+  return /^[a-z0-9][a-z0-9-]*\.myshopify\.com$/.test(shop) ? shop : "";
+}
+
+async function authenticatePublicStorefront(req, res, next) {
+  try {
+    const shop = publicStorefrontShop();
+    if (!shop) return res.status(404).json({ error: "Not found." });
+    const integration = await StoreIntegration.exists({ platform: "shopify", storeDomain: shop, status: "active" });
+    if (!integration) return res.status(403).json({ error: "Shop is not connected." });
+    req.verifiedShop = shop;
+    req.proxyCustomerId = "";
+    return next();
+  } catch (error) {
+    console.error("Public storefront authentication error:", error.message);
+    return res.status(500).json({ error: "Unable to authenticate shop." });
+  }
+}
+
 async function authenticateAppProxy(req, res, next) {
+  if (req.baseUrl === "/public") return authenticatePublicStorefront(req, res, next);
   try {
     const queryString = req.originalUrl.split("?")[1] || "";
 
@@ -130,6 +154,45 @@ function publicApiUrl() {
     return "";
   }
 }
+
+// The catalog for a standalone website: the cards a shopper browses (published, sellable), numeric ids
+// so the page can keep its own cart. Cached by the catalog layer; nothing here is private store data.
+const productsLimiter = createChatRateLimiter({ name: "public-products", limit: Number(process.env.LIGHT_RATE_LIMIT) || 20 });
+const numericId = (gid) => String(gid || "").split("/").pop();
+router.get("/products", productsLimiter, async (req, res) => {
+  try {
+    const { getCatalogSummary } = await import("../tools/shopify/catalog.js");
+    const summary = await getCatalogSummary(req.verifiedShop);
+    if (summary.error) return res.status(502).json({ error: "Catalog is not available right now." });
+    const products = (summary.allProducts || summary.products || [])
+      .filter((p) => p.published !== false && p.status === "ACTIVE")
+      .map((p) => ({
+        id: numericId(p.id),
+        title: p.title,
+        handle: p.handle,
+        category: p.category || "",
+        vendor: p.vendor || "",
+        image: p.image || null,
+        price: p.price,
+        currency: p.currency || summary.currency,
+        description: String(p.description || "").slice(0, 400),
+        variants: (p.variants || []).map((v) => ({
+          id: numericId(v.id),
+          title: v.title,
+          price: v.price,
+          compareAtPrice: v.compareAtPrice || null,
+          image: v.image || null,
+          inStock: Boolean(v.sellable),
+        })),
+      }))
+      .filter((p) => p.variants.length > 0);
+    res.set("Cache-Control", "public, max-age=60");
+    return res.json({ store: summary.storeName || "", currency: summary.currency, categories: summary.categories || [], products });
+  } catch (error) {
+    console.error("public products failed:", error.message);
+    return res.status(500).json({ error: "Catalog is not available right now." });
+  }
+});
 
 router.get("/", (req, res) => {
   return res.json({
