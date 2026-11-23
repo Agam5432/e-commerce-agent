@@ -303,7 +303,9 @@ function clearStateCookie(res) {
 }
 
 async function exchangeAuthCodeForTokens(shop, clientId, clientSecret, code) {
-  const requestExpiring = process.env.SHOPIFY_REQUEST_EXPIRING_TOKENS === "true";
+  // Shopify no longer accepts non-expiring offline tokens on the Admin API, so ask for expiring ones
+  // (with a refresh token) unless SHOPIFY_REQUEST_EXPIRING_TOKENS=false is set explicitly.
+  const requestExpiring = process.env.SHOPIFY_REQUEST_EXPIRING_TOKENS !== "false";
 
   const doExchange = async (includeExpiring) => {
     const params = {
