@@ -3,15 +3,17 @@
   var $ = function (id) { return document.getElementById(id); };
   var PAGE = 24;
   var products = [], shown = PAGE, category = "all", query = "", sort = "featured", labels = {};
-  var money;
+  var money, money2;
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function img(url, w) {
     if (!url) return "";
     return url + (url.indexOf("?") > -1 ? "&" : "?") + "width=" + (w || 500);
   }
-  function humanize(slug) { return String(slug || "other").replace(/_/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }
-  function fmt(n) { return money.format(Number(n) || 0); }
+  function humanize(slug) {
+    return String(slug || "other").replace(/_s_/g, "s_").replace(/_/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); }).replace(/\b(Men|Women)s\b/, "$1's").replace(/\bKids\b/, "Kids'").replace(/\bAnd\b/, "&");
+  }
+  function fmt(n) { n = Number(n) || 0; return (n % 1 ? money2 : money).format(n); }
   function minPrice(p) { var n = Number(p.price); return isFinite(n) ? n : Math.min.apply(null, p.variants.map(function (v) { return Number(v.price); })); }
   function firstSellable(p) { return p.variants.filter(function (v) { return v.inStock; })[0] || null; }
   function onlyDefault(p) { return p.variants.length === 1 && /^default title$/i.test(p.variants[0].title); }
@@ -185,6 +187,7 @@
 
   TS.catalogPromise.then(function (data) {
     money = new Intl.NumberFormat("en-IN", { style: "currency", currency: data.currency || "INR", maximumFractionDigits: 0 });
+    money2 = new Intl.NumberFormat("en-IN", { style: "currency", currency: data.currency || "INR" });
     products = data.products;
     renderChips(); renderGrid(); updateCount(TS.cart.get());
   }, function () {
